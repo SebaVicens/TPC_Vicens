@@ -9,7 +9,7 @@ namespace Negocio
 {
     public class ArticulosNegocio
     {
-        public IList<Articulos> listar()
+        public IList<Articulos> listar() ///
         {
             AccesoDatos conexion = new AccesoDatos();
             IList<Articulos> lista = new List<Articulos>();

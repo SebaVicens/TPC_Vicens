@@ -14,7 +14,7 @@ namespace Negocio
         private SqlCommand comando;
         private SqlDataReader lector;
 
-        public SqlDataReader Lector
+        public SqlDataReader Lector ///// SCRIP_DB
         {
             get { return lector; }
         }
