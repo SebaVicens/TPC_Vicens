@@ -16,5 +16,26 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void TsmArticulos_Click(object sender, EventArgs e)
+        {
+            Articulos articulosListar = new Articulos();
+            this.Hide();
+            articulosListar.Show();
+        }
+
+        private void mARCASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Marcas marcasListar = new Marcas();
+            this.Hide();
+            marcasListar.Show();
+        }
+
+        private void TsmClientes_Click(object sender, EventArgs e)
+        {
+            Clientes clientesListar = new Clientes();
+            this.Hide();
+            clientesListar.Show();
+        }
     }
 }

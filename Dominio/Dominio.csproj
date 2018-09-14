@@ -45,7 +45,7 @@
     <Compile Include="CategoriasArticulos.cs" />
     <Compile Include="Clientes.cs" />
     <Compile Include="CompraArticulos.cs" />
-    <Compile Include="Compras.cs" />
+    <Compile Include="RegistroCompras.cs" />
     <Compile Include="Localidades.cs" />
     <Compile Include="Marcas.cs" />
     <Compile Include="Persona.cs" />
@@ -54,7 +54,7 @@
     <Compile Include="Provincias.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="VentaArticulos.cs" />
-    <Compile Include="Ventas.cs" />
+    <Compile Include="RegistroVentas.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

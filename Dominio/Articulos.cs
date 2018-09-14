@@ -16,6 +16,7 @@ namespace Dominio
         public int Stock { get; set; }
         public decimal Pu { get; set; }
         public decimal PuCompra { get; set; }
+        public bool Estado { get; set; }
 
 
         public override string ToString()

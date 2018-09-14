@@ -10,14 +10,14 @@ namespace Dominio
     {
         public int IdMarca { get; set; }
         public string Descripcion { get; set; }
+        public bool Estado { get; set; }
 
         public Marcas()
         {
         }
 
-        public Marcas(int id, string desc)
+        public Marcas(string desc)
         {
-            IdMarca = id;
             Descripcion = desc;
         }
 

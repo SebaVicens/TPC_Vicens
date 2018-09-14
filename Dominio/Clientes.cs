@@ -9,7 +9,9 @@ namespace Dominio
     public class Clientes : Persona
     {
         public int IdCliente { get; set; }
+        public string Calle { get; set; }
         public string Sexo { get; set; }
         public int IdLocalidad { get; set; }
+        public bool Estado { get; set; }
     }
 }
