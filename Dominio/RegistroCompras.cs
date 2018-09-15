@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class RegistroCompras
     {
-        public DateTime Fecha { get; set; }
+        public DateTime Fecha { get; set; } //
         public int IdProveedor { get; set; }
         public int IdUsuario { get; set; }
     }
