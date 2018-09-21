@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class ArticulosCrear : Form
     {
-        public ArticulosCrear()
+        public ArticulosCrear() //
         {
             InitializeComponent();
         }
