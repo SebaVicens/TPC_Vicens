@@ -37,5 +37,12 @@ namespace Presentacion
             this.Hide();
             clientesListar.Show();
         }
+
+        private void TsmProveedores_Click(object sender, EventArgs e)
+        {
+            Proveedores provListar = new Proveedores();
+            this.Hide();
+            provListar.Show();
+        }
     }
 }

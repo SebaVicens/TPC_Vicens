@@ -9,7 +9,7 @@ namespace Negocio
 {
     public class ArticulosNegocio
     {
-        public IList<Articulos> listar() ///
+        public IList<Articulos> listar()
         {
             AccesoDatos conexion = new AccesoDatos();
             IList<Articulos> lista = new List<Articulos>();
@@ -51,6 +51,41 @@ namespace Negocio
 
         }
 
+        public void AgregarArticulo  (Articulos art)
+        {
+
+            AccesoDatos conexion = new AccesoDatos();
+
+            string consulta = "INSERT INTO ARTICULOS (DESCRIPCION, IDMARCA, IDPROVEEDOR, ORIGEN, STOCK, PU, PUCOMPRA) VALUES (@DESCRIPCION, @IDMARCA, @IDPROVEEDOR, @ORIGEN, @STOCK, @PU, @PUCOMPRA)";
+
+            try
+            {
+                conexion.limpiarParametros();
+
+                conexion.agregarParametro("@DESCRIPCION", art.Descripcion);
+                conexion.agregarParametro("@IDMARCA", art.Marca.IdMarca);
+                conexion.agregarParametro("@IDPROVEEDOR", art.Proveedores.IdProveedor);
+                conexion.agregarParametro("@ORIGEN", art.Origen);
+                conexion.agregarParametro("@STOCK", art.Stock);
+                conexion.agregarParametro("@PU", art.Pu);
+                conexion.agregarParametro("@PUCOMPRA", art.PuCompra);
+
+
+                conexion.setearConsulta(consulta);
+
+             
+                conexion.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+        }
 
     }
 }

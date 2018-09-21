@@ -14,7 +14,8 @@ namespace Dominio
         public string Direccion { get; set; }
         public int IdLocalidad { get; set; }
         public string Telefono { get; set; }
-        public string Mail { get; set; } 
+        public string Mail { get; set; }
+        public bool Estado { get; set; }
 
         public Proveedores()
         {

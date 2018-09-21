@@ -30,13 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.TsmArticulos = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmCompras = new System.Windows.Forms.ToolStripMenuItem();
-            this.TsmVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmProveedores = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmHistorico = new System.Windows.Forms.ToolStripMenuItem();
             this.TsmUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.mARCASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,17 +65,12 @@
             this.TsmArticulos.Text = "ARTICULOS";
             this.TsmArticulos.Click += new System.EventHandler(this.TsmArticulos_Click);
             // 
-            // TsmCompras
+            // mARCASToolStripMenuItem
             // 
-            this.TsmCompras.Name = "TsmCompras";
-            this.TsmCompras.Size = new System.Drawing.Size(76, 20);
-            this.TsmCompras.Text = "COMPRAS";
-            // 
-            // TsmVentas
-            // 
-            this.TsmVentas.Name = "TsmVentas";
-            this.TsmVentas.Size = new System.Drawing.Size(63, 20);
-            this.TsmVentas.Text = "VENTAS";
+            this.mARCASToolStripMenuItem.Name = "mARCASToolStripMenuItem";
+            this.mARCASToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.mARCASToolStripMenuItem.Text = "MARCAS";
+            this.mARCASToolStripMenuItem.Click += new System.EventHandler(this.mARCASToolStripMenuItem_Click);
             // 
             // TsmClientes
             // 
@@ -89,6 +84,19 @@
             this.TsmProveedores.Name = "TsmProveedores";
             this.TsmProveedores.Size = new System.Drawing.Size(102, 20);
             this.TsmProveedores.Text = "PROVEEDORES";
+            this.TsmProveedores.Click += new System.EventHandler(this.TsmProveedores_Click);
+            // 
+            // TsmCompras
+            // 
+            this.TsmCompras.Name = "TsmCompras";
+            this.TsmCompras.Size = new System.Drawing.Size(76, 20);
+            this.TsmCompras.Text = "COMPRAS";
+            // 
+            // TsmVentas
+            // 
+            this.TsmVentas.Name = "TsmVentas";
+            this.TsmVentas.Size = new System.Drawing.Size(63, 20);
+            this.TsmVentas.Text = "VENTAS";
             // 
             // TsmHistorico
             // 
@@ -101,13 +109,6 @@
             this.TsmUsuarios.Name = "TsmUsuarios";
             this.TsmUsuarios.Size = new System.Drawing.Size(80, 20);
             this.TsmUsuarios.Text = "USUARIOS";
-            // 
-            // mARCASToolStripMenuItem
-            // 
-            this.mARCASToolStripMenuItem.Name = "mARCASToolStripMenuItem";
-            this.mARCASToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.mARCASToolStripMenuItem.Text = "MARCAS";
-            this.mARCASToolStripMenuItem.Click += new System.EventHandler(this.mARCASToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 

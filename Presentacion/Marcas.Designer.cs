@@ -58,11 +58,11 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(664, 308);
+            this.btnSalir.Location = new System.Drawing.Point(664, 312);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 33);
             this.btnSalir.TabIndex = 56;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Volver Menu";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 

@@ -45,5 +45,12 @@ namespace Presentacion
             this.Hide();
             menuPrin.Show();
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            ArticulosCrear artGral = new ArticulosCrear();
+            this.Hide();
+            artGral.Show();
+        }
     }
 }

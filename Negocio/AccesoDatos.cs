@@ -14,14 +14,14 @@ namespace Negocio
         private SqlCommand comando;
         private SqlDataReader lector;
 
-        public SqlDataReader Lector ///// SCRIP_DB
+        public SqlDataReader Lector 
         {
             get { return lector; }
         }
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("data source=LAPTOP-20LSGO9A\\SQLEXPRESS; initial catalog=TPC_VICENS_BD; integrated security=sspi");
+            conexion = new SqlConnection("data source=LAPTOP-20LSGO9A\\SQLEXPRESS; initial catalog=VICENS_BD; integrated security=sspi");
             comando = new SqlCommand();
             comando.Connection = conexion;
         }
@@ -72,6 +72,19 @@ namespace Negocio
         public void agregarParametro(string nombre, Object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);
+        }
+
+        public void ejecutarAccion()
+        {
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
