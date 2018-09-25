@@ -21,7 +21,7 @@ namespace Negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("data source=LAPTOP-20LSGO9A\\SQLEXPRESS; initial catalog=VICENS_BD; integrated security=sspi");
+            conexion = new SqlConnection("data source=LAPTOP-20LSGO9A\\SQLEXPRESS; initial catalog=TPC_VICENS_BD; integrated security=sspi");
             comando = new SqlCommand();
             comando.Connection = conexion;
         }

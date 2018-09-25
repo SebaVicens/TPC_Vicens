@@ -19,28 +19,28 @@ namespace Presentacion
 
         private void TsmArticulos_Click(object sender, EventArgs e)
         {
-            Articulos articulosListar = new Articulos();
+            Articuloss articulosListar = new Articuloss();
             this.Hide();
             articulosListar.Show();
         }
 
         private void mARCASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Marcas marcasListar = new Marcas();
+            Marcass marcasListar = new Marcass();
             this.Hide();
             marcasListar.Show();
         }
 
         private void TsmClientes_Click(object sender, EventArgs e)
         {
-            Clientes clientesListar = new Clientes();
+            Clientess clientesListar = new Clientess();
             this.Hide();
             clientesListar.Show();
         }
 
         private void TsmProveedores_Click(object sender, EventArgs e)
         {
-            Proveedores provListar = new Proveedores();
+            Proveedoress provListar = new Proveedoress();
             this.Hide();
             provListar.Show();
         }

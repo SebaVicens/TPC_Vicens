@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPu = new System.Windows.Forms.TextBox();
-            this.txtStock = new System.Windows.Forms.TextBox();
             this.txtOrigen = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Editar_Pventa
@@ -115,15 +115,6 @@
             this.txtPu.Size = new System.Drawing.Size(183, 20);
             this.txtPu.TabIndex = 1006;
             // 
-            // txtStock
-            // 
-            this.txtStock.Enabled = false;
-            this.txtStock.Location = new System.Drawing.Point(518, 39);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.ReadOnly = true;
-            this.txtStock.Size = new System.Drawing.Size(183, 20);
-            this.txtStock.TabIndex = 1005;
-            // 
             // txtOrigen
             // 
             this.txtOrigen.Location = new System.Drawing.Point(137, 137);
@@ -193,11 +184,19 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(518, 39);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(183, 20);
+            this.txtStock.TabIndex = 1019;
+            // 
             // ArticulosCrear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.Editar_Pventa);
             this.Controls.Add(this.cbxMarca);
             this.Controls.Add(this.cbxProveedor);
@@ -206,7 +205,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPu);
-            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtOrigen);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label13);
@@ -233,7 +231,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPu;
-        private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtOrigen;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label13;
@@ -242,5 +239,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.TextBox txtStock;
     }
 }

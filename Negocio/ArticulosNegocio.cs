@@ -51,12 +51,12 @@ namespace Negocio
 
         }
 
-        public void AgregarArticulo  (Articulos art)
+        public void AgregarArticulo (Articulos art)
         {
 
             AccesoDatos conexion = new AccesoDatos();
 
-            string consulta = "INSERT INTO ARTICULOS (DESCRIPCION, IDMARCA, IDPROVEEDOR, ORIGEN, STOCK, PU, PUCOMPRA) VALUES (@DESCRIPCION, @IDMARCA, @IDPROVEEDOR, @ORIGEN, @STOCK, @PU, @PUCOMPRA)";
+            string consulta = "INSERT INTO ARTICULOS (DESCRIPCION, IDMARCA, IDPROVEEDOR, ORIGEN, STOCK, PU, PUCOMPRA, ESTADO) VALUES (@DESCRIPCION, @IDMARCA, @IDPROVEEDOR, @ORIGEN, @STOCK, @PU, @PUCOMPRA, @ESTADO)";
 
             try
             {
@@ -69,6 +69,7 @@ namespace Negocio
                 conexion.agregarParametro("@STOCK", art.Stock);
                 conexion.agregarParametro("@PU", art.Pu);
                 conexion.agregarParametro("@PUCOMPRA", art.PuCompra);
+                conexion.agregarParametro("@ESTADO", art.Estado);
 
 
                 conexion.setearConsulta(consulta);

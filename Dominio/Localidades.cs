@@ -8,5 +8,8 @@ namespace Dominio
 {
     public class Localidades
     {
+        public int idlocalidad { get; set; }
+        public string descripcion { get; set; }
+        public int idprovincia { get; set; }
     }
 }

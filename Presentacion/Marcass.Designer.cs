@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class Marcas
+    partial class Marcass
     {
         /// <summary>
         /// Required designer variable.

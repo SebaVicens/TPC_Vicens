@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class Clientes
+    partial class Clientess
     {
         /// <summary>
         /// Required designer variable.
@@ -86,6 +86,7 @@
             this.btnCrearCliente.TabIndex = 60;
             this.btnCrearCliente.Text = "Crear";
             this.btnCrearCliente.UseVisualStyleBackColor = true;
+            this.btnCrearCliente.Click += new System.EventHandler(this.btnCrearCliente_Click);
             // 
             // dgvClientes
             // 
@@ -110,7 +111,7 @@
             this.btnModificarCliente.Text = "Modificar";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
             // 
-            // Clientes
+            // Clientess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,7 +123,7 @@
             this.Controls.Add(this.btnCrearCliente);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnModificarCliente);
-            this.Name = "Clientes";
+            this.Name = "Clientess";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();

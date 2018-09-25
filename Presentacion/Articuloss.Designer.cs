@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class Articulos
+    partial class Articuloss
     {
         /// <summary>
         /// Required designer variable.

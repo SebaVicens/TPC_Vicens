@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class Proveedores
+    partial class Proveedoress
     {
         /// <summary>
         /// Required designer variable.

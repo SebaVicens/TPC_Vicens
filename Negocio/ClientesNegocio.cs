@@ -51,5 +51,36 @@ namespace Negocio
 
         }
 
+        public void AgregarCliente (Clientes cli)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+
+            string consulta = "INSERT INTO CLIENTES ( DNI, NOMBRE, APELLIDO, FNAC, CALLE, SEXO, IDLOCALIDAD, ESTADO) VALUES (@DNI, @NOMBRE, @APELLIDO, @FNAC, @CALLE, @SEXO, @IDLOCALIDAD, @ESTADO)";
+
+            try
+            {
+
+                conexion.limpiarParametros();
+
+                conexion.agregarParametro("@DNI", cli.Dni);
+                conexion.agregarParametro("@NOMBRE", cli.Nombre);
+                conexion.agregarParametro("@APELLIDO", cli.Apellido);
+                conexion.agregarParametro("@FNAC", cli.FechaNac.ToString("dd-MM-yyyy"));
+                conexion.agregarParametro("@CALLE", cli.Calle);
+                conexion.agregarParametro("@SEXO", cli.Sexo);
+                conexion.agregarParametro("@IDLOCALIDAD", cli.IdLocalidad);
+                conexion.agregarParametro("@ESTADO", cli.Estado);
+
+                conexion.setearConsulta(consulta);
+
+                conexion.ejecutarAccion();
+
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

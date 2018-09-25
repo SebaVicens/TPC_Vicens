@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Articulos.cs">
+    <Compile Include="Articuloss.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Articulos.Designer.cs">
-      <DependentUpon>Articulos.cs</DependentUpon>
+    <Compile Include="Articuloss.Designer.cs">
+      <DependentUpon>Articuloss.cs</DependentUpon>
     </Compile>
     <Compile Include="ArticulosCrear.cs">
       <SubType>Form</SubType>
@@ -59,17 +59,23 @@
     <Compile Include="ArticulosCrear.Designer.cs">
       <DependentUpon>ArticulosCrear.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.cs">
+    <Compile Include="Clientess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <Compile Include="Clientess.Designer.cs">
+      <DependentUpon>Clientess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Marcas.cs">
+    <Compile Include="ClientesCrear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Marcas.Designer.cs">
-      <DependentUpon>Marcas.cs</DependentUpon>
+    <Compile Include="ClientesCrear.Designer.cs">
+      <DependentUpon>ClientesCrear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marcass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcass.Designer.cs">
+      <DependentUpon>Marcass.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -79,23 +85,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proveedores.cs">
+    <Compile Include="ProveedoresCrear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proveedores.Designer.cs">
-      <DependentUpon>Proveedores.cs</DependentUpon>
+    <Compile Include="ProveedoresCrear.Designer.cs">
+      <DependentUpon>ProveedoresCrear.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Articulos.resx">
-      <DependentUpon>Articulos.cs</DependentUpon>
+    <Compile Include="Proveedoress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedoress.Designer.cs">
+      <DependentUpon>Proveedoress.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Articuloss.resx">
+      <DependentUpon>Articuloss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArticulosCrear.resx">
       <DependentUpon>ArticulosCrear.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Clientess.resx">
+      <DependentUpon>Clientess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Marcas.resx">
-      <DependentUpon>Marcas.cs</DependentUpon>
+    <EmbeddedResource Include="ClientesCrear.resx">
+      <DependentUpon>ClientesCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcass.resx">
+      <DependentUpon>Marcass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -109,8 +124,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Proveedores.resx">
-      <DependentUpon>Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="Proveedoress.resx">
+      <DependentUpon>Proveedoress.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

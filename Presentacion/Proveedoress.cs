@@ -7,31 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dominio;
 using Negocio;
+using Dominio;
 
 namespace Presentacion
 {
-    public partial class Marcas : Form
+    public partial class Proveedoress : Form
     {
-        public Marcas()
+        public Proveedoress()
         {
             InitializeComponent();
         }
 
-        private void Marcas_Load(object sender, EventArgs e)
+        private void Proveedores_Load(object sender, EventArgs e)
         {
-            MarcasNegocio marcasNeg = new MarcasNegocio();
-
+            ProveedoresNegocio provListar = new ProveedoresNegocio();
             try
             {
-                dgvMarcas.DataSource = marcasNeg.listar();
-                dgvMarcas.Columns["Estado"].Visible = false;                
-
+                dgvProv.DataSource = provListar.listar();
+                dgvProv.Columns["Descripcion"].Visible = false;
+                dgvProv.Columns["Estado"].Visible = false;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
             

@@ -12,27 +12,29 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class Clientes : Form
+    public partial class Marcass : Form
     {
-        public Clientes()
+        public Marcass()
         {
             InitializeComponent();
         }
 
-        private void Clientes_Load(object sender, EventArgs e)
+        private void Marcas_Load(object sender, EventArgs e)
         {
-            ClientesNegocio clientesListar = new ClientesNegocio();
+            MarcasNegocio marcasNeg = new MarcasNegocio();
 
             try
             {
-                dgvClientes.DataSource = clientesListar.listar();
-                dgvClientes.Columns["Estado"].Visible = false;
-                dgvClientes.Columns["IdCliente"].Visible = false;
+                dgvMarcas.DataSource = marcasNeg.listar();
+                dgvMarcas.Columns["Estado"].Visible = false;                
+
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.ToString());
             }
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

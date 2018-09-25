@@ -14,17 +14,19 @@ namespace Presentacion
 {
     public partial class ArticulosCrear : Form
     {
-        public ArticulosCrear() //
+        public ArticulosCrear()     
         {
             InitializeComponent();
         }
 
-        public Articulos articulo;
-        public ArticulosCrear(Articulos articulo)
+        private Articulos articulos;
+
+        public ArticulosCrear(Articulos articulos)
         {
             InitializeComponent();
-            this.articulo = articulo;
+            this.articulos = articulos;
         }
+
 
         private void ArticulosGral_Load(object sender, EventArgs e)
         {
@@ -56,6 +58,31 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            ArticulosNegocio artNeg = new ArticulosNegocio();
+
+            try
+            {
+
+                Articulos articulo = new Articulos();
+
+                articulo.Descripcion = txtDescripcion.Text.Trim();
+                articulo.Proveedores = (Proveedores)cbxProveedor.SelectedItem;
+                articulo.Marca = (Marcas)cbxMarca.SelectedItem;
+                articulo.Origen = txtOrigen.Text.Trim();
+                articulo.Stock = Convert.ToInt32(txtStock.Text.Trim());
+                articulo.Pu = Convert.ToInt32(txtPu.Text.Trim());
+                articulo.PuCompra = Convert.ToInt32(txtPuCompra.Text.Trim());
+                articulo.Estado = true;
+
+                artNeg.AgregarArticulo(articulo);
+                MessageBox.Show("Agregado con éxito");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
 
         }
     }

@@ -7,33 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
 using Dominio;
+using Negocio;
 
 namespace Presentacion
 {
-    public partial class Proveedores : Form
+    public partial class Clientess : Form
     {
-        public Proveedores()
+        public Clientess()
         {
             InitializeComponent();
         }
 
-        private void Proveedores_Load(object sender, EventArgs e)
+        private void Clientes_Load(object sender, EventArgs e)
         {
-            ProveedoresNegocio provListar = new ProveedoresNegocio();
+            ClientesNegocio clientesListar = new ClientesNegocio();
+
             try
             {
-                dgvProv.DataSource = provListar.listar();
-                dgvProv.Columns["Descripcion"].Visible = false;
-                dgvProv.Columns["Estado"].Visible = false;
+                dgvClientes.DataSource = clientesListar.listar();
+                dgvClientes.Columns["Estado"].Visible = false;
+                dgvClientes.Columns["IdCliente"].Visible = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            
         }
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -41,5 +42,12 @@ namespace Presentacion
             this.Hide();
             menuPrin.Show();
         }
-    }
+
+        private void btnCrearCliente_Click(object sender, EventArgs e)
+        {
+            ClientesCrear cli = new ClientesCrear();
+            this.Hide();
+            cli.Show();
+        }
+    }   
 }

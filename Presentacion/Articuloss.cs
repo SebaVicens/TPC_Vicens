@@ -12,9 +12,9 @@ using Dominio;
 
 namespace Presentacion
 {
-    public partial class Articulos : Form
+    public partial class Articuloss : Form
     {
-        public Articulos()
+        public Articuloss()
         {
             InitializeComponent();
         }
