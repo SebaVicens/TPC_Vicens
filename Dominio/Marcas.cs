@@ -16,8 +16,9 @@ namespace Dominio
         {
         }
 
-        public Marcas(string desc)
+        public Marcas(int id, string desc)
         {
+            IdMarca = id;
             Descripcion = desc;
         }
 

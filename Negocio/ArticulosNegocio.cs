@@ -16,7 +16,7 @@ namespace Negocio
 
             try
             {
-                conexion.setearConsulta("SELECT A.DESCRIPCION, M.DESCRIPCION, A.ORIGEN, A.STOCK, A.PU FROM ARTICULOS AS A INNER JOIN MARCAS AS M ON M.IDMARCA = A.IDMARCA WHERE A.ESTADO = 1");
+                conexion.setearConsulta("SELECT A.IDARTICULO, A.DESCRIPCION, A.IDMARCA, MA.DESCRIPCION, A.IDPROVEEDOR, P.DESCRIPCION, A.ORIGEN, A.STOCK, A.PU, A.PUCOMPRA, A.ESTADO FROM ARTICULOS AS A INNER JOIN MARCAS AS MA ON MA.IDMARCA = A.IDMARCA INNER JOIN PROVEEDORES AS P ON P.IDPROVEEDOR = A.IDPROVEEDOR WHERE A.ESTADO = 1");
                 conexion.leerConsulta();
 
                 while (conexion.Lector.Read())
@@ -24,11 +24,15 @@ namespace Negocio
 
                     Articulos art = new Articulos();
 
-                    art.Descripcion = conexion.Lector.GetString(0);
-                    art.Marca = new Marcas(conexion.Lector.GetString(1));
-                    art.Origen = conexion.Lector.GetString(2);
-                    art.Stock = conexion.Lector.GetInt32(3);
-                    art.Pu = conexion.Lector.GetDecimal(4);
+                    art.IdArticulo = conexion.Lector.GetInt32(0);
+                    art.Descripcion = conexion.Lector.GetString(1);
+                    art.Marca = new Marcas(conexion.Lector.GetInt32(2), conexion.Lector.GetString(3));
+                    art.Proveedores = new Proveedores(conexion.Lector.GetInt32(4), conexion.Lector.GetString(5));
+                    art.Origen = conexion.Lector.GetString(6);
+                    art.Stock = conexion.Lector.GetInt32(7);
+                    art.Pu = conexion.Lector.GetDecimal(8);
+                    art.PuCompra = conexion.Lector.GetDecimal(9);
+                    art.Estado = conexion.Lector.GetBoolean(10);
 
                     lista.Add(art);
                 }
@@ -87,6 +91,45 @@ namespace Negocio
                 conexion = null;
             }
         }
+
+        public void ModificarArticulo(Articulos art)
+        {
+
+            AccesoDatos conexion = new AccesoDatos();
+
+            string consulta = "UPDATE ARTICULOS SET DESCRIPCION = @DESCRIPCION, IDMARCA = @IDMARCA, IDPROVEEDOR = @IDPROVEEDOR, ORIGEN = @ORIGEN, STOCK = @STOCK, PU = @PU, PUCOMPRA = @PUCOMPRA, @ESTADO = ESTADO WHERE IDARTICULO = @IDARTICULO";
+
+            try
+            {
+                conexion.limpiarParametros();
+
+                conexion.agregarParametro("@IDARTICULO", art.IdArticulo);
+                conexion.agregarParametro("@DESCRIPCION", art.Descripcion);
+                conexion.agregarParametro("@IDMARCA", art.Marca.IdMarca);
+                conexion.agregarParametro("@IDPROVEEDOR", art.Proveedores.IdProveedor);
+                conexion.agregarParametro("@ORIGEN", art.Origen);
+                conexion.agregarParametro("@STOCK", art.Stock);
+                conexion.agregarParametro("@PU", art.Pu);
+                conexion.agregarParametro("@PUCOMPRA", art.PuCompra);
+                conexion.agregarParametro("@ESTADO", art.Estado);
+
+
+                conexion.setearConsulta(consulta);
+
+
+                conexion.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+        }
+
 
     }
 }

@@ -86,6 +86,7 @@
             this.btnCrear.TabIndex = 53;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // dgvProv
             // 
@@ -110,7 +111,7 @@
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
-            // Proveedores
+            // Proveedoress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,7 +123,7 @@
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.dgvProv);
             this.Controls.Add(this.btnModificar);
-            this.Name = "Proveedores";
+            this.Name = "Proveedoress";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.Proveedores_Load);

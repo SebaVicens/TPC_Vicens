@@ -16,20 +16,23 @@ namespace Negocio
 
             try
             {
-                conexion.setearConsulta("SELECT DNI, NOMBRE, APELLIDO, FNAC, CALLE, IDLOCALIDAD, SEXO FROM CLIENTES WHERE ESTADO = 1");
+                conexion.setearConsulta("SELECT IDCLIENTE, DNI, NOMBRE, APELLIDO, FNAC, CALLE, SEXO, IDLOCALIDAD, ESTADO FROM CLIENTES WHERE ESTADO = 1");
                 conexion.leerConsulta();
 
                 while (conexion.Lector.Read())
                 {
                     Clientes clientes = new Clientes();
 
-                    clientes.Dni = conexion.Lector.GetInt32(0);
-                    clientes.Nombre = conexion.Lector.GetString(1);
-                    clientes.Apellido = conexion.Lector.GetString(2);
-                    clientes.FechaNac = conexion.Lector.GetDateTime(3);
-                    clientes.Calle = conexion.Lector.GetString(4);
-                    clientes.IdLocalidad = conexion.Lector.GetInt32(5);
+                    clientes.IdCliente = conexion.Lector.GetInt32(0);
+                    clientes.Dni = conexion.Lector.GetInt32(1);
+                    clientes.Nombre = conexion.Lector.GetString(2);
+                    clientes.Apellido = conexion.Lector.GetString(3);
+                    clientes.FechaNac = conexion.Lector.GetDateTime(4);
+                    clientes.Calle = conexion.Lector.GetString(5);
                     clientes.Sexo = conexion.Lector.GetString(6);
+                    clientes.IdLocalidad = conexion.Lector.GetInt32(7);
+                    clientes.Estado = conexion.Lector.GetBoolean(8);
+                    
 
                     lista.Add(clientes);
 
@@ -80,6 +83,44 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public void ModificarCliente(Clientes cli)
+        {
+
+            AccesoDatos conexion = new AccesoDatos();
+
+            string consulta = "UPDATE CLIENTES SET DNI=@DNI, NOMBRE=@NOMBRE, APELLIDO=@APELLIDO, FNAC=@FNAC, CALLE=@CALLE, SEXO=@SEXO, IDLOCALIDAD=@IDLOCALIDAD, @ESTADO=ESTADO WHERE IDCLIENTE = @IDCLIENTE";
+
+            try
+            {
+                conexion.limpiarParametros();
+
+                conexion.agregarParametro("@IDCLIENTE", cli.IdCliente);
+                conexion.agregarParametro("@DNI", cli.Dni);
+                conexion.agregarParametro("@NOMBRE", cli.Nombre);
+                conexion.agregarParametro("@APELLIDO", cli.Apellido);
+                conexion.agregarParametro("@FNAC", cli.FechaNac);
+                conexion.agregarParametro("@CALLE", cli.Calle);
+                conexion.agregarParametro("@SEXO", cli.Sexo);
+                conexion.agregarParametro("@IDLOCALIDAD", cli.IdLocalidad);
+                conexion.agregarParametro("@ESTADO", cli.Estado);             
+
+
+                conexion.setearConsulta(consulta);
+
+
+                conexion.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
             }
         }
     }

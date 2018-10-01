@@ -41,5 +41,12 @@ namespace Presentacion
             this.Hide();
             menuPrin.Show();
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            ProveedoresCrear ProvCrear = new ProveedoresCrear();
+            this.Hide();
+            ProvCrear.Show();
+        }
     }
 }

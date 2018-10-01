@@ -43,5 +43,12 @@ namespace Presentacion
             this.Hide();
             menuPrin.Show();
         }
+
+        private void btnCrearMarca_Click(object sender, EventArgs e)
+        {
+            MarcasCrear marcaCrear = new MarcasCrear();
+            this.Hide();
+            marcaCrear.Show();
+        }
     }
 }

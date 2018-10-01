@@ -49,5 +49,13 @@ namespace Presentacion
             this.Hide();
             cli.Show();
         }
+
+        private void btnModificarCliente_Click(object sender, EventArgs e)
+        {
+            Clientes clientes = (Clientes)dgvClientes.CurrentRow.DataBoundItem;
+            ClientesModificar cliMod = new ClientesModificar(clientes);
+            this.Hide();
+            cliMod.Show();
+        }
     }   
 }

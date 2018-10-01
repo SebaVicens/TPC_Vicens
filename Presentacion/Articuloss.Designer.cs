@@ -110,8 +110,9 @@
             this.btnModificar.TabIndex = 47;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // Articulos
+            // Articuloss
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,7 +124,7 @@
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnModificar);
-            this.Name = "Articulos";
+            this.Name = "Articuloss";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";
             this.Load += new System.EventHandler(this.Articulos_Load);

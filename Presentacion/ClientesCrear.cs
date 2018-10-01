@@ -79,5 +79,15 @@ namespace Presentacion
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Decea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MenuPrincipal menuPrin = new MenuPrincipal();
+                this.Close();
+                menuPrin.Show();
+            }
+        }
     }
 }

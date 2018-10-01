@@ -44,7 +44,34 @@ namespace Negocio
                 conexion.cerrarConexion();
                 conexion = null;
             }
+        }
 
+
+        public void AgregarMarca(Marcas marc)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+
+            string consulta = "INSERT INTO MARCAS (IDMARCA, DESCRIPCION, ESTADO) VALUES (@IDMARCA, @DESCRIPCION, @ESTADO)";
+
+            try
+            {
+
+                conexion.limpiarParametros();
+
+                conexion.agregarParametro("@IDMARCA", marc.IdMarca);
+                conexion.agregarParametro("@DESCRIPCION", marc.Descripcion);
+                conexion.agregarParametro("@ESTADO", marc.Estado);
+
+                conexion.setearConsulta(consulta);
+
+                conexion.ejecutarAccion();
+
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

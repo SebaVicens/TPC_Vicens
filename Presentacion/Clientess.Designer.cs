@@ -110,6 +110,7 @@
             this.btnModificarCliente.TabIndex = 61;
             this.btnModificarCliente.Text = "Modificar";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // Clientess
             // 
@@ -124,6 +125,7 @@
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnModificarCliente);
             this.Name = "Clientess";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();

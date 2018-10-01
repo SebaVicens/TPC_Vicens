@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticulosModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArticulosModificar.Designer.cs">
+      <DependentUpon>ArticulosModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Articuloss.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,12 @@
     <Compile Include="ArticulosCrear.Designer.cs">
       <DependentUpon>ArticulosCrear.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientesModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesModificar.Designer.cs">
+      <DependentUpon>ClientesModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     </Compile>
     <Compile Include="ClientesCrear.Designer.cs">
       <DependentUpon>ClientesCrear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarcasCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarcasCrear.Designer.cs">
+      <DependentUpon>MarcasCrear.cs</DependentUpon>
     </Compile>
     <Compile Include="Marcass.cs">
       <SubType>Form</SubType>
@@ -97,17 +115,26 @@
     <Compile Include="Proveedoress.Designer.cs">
       <DependentUpon>Proveedoress.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ArticulosModificar.resx">
+      <DependentUpon>ArticulosModificar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Articuloss.resx">
       <DependentUpon>Articuloss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArticulosCrear.resx">
       <DependentUpon>ArticulosCrear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientesModificar.resx">
+      <DependentUpon>ClientesModificar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientess.resx">
       <DependentUpon>Clientess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesCrear.resx">
       <DependentUpon>ClientesCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarcasCrear.resx">
+      <DependentUpon>MarcasCrear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Marcass.resx">
       <DependentUpon>Marcass.cs</DependentUpon>
@@ -124,6 +151,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProveedoresCrear.resx">
+      <DependentUpon>ProveedoresCrear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Proveedoress.resx">
       <DependentUpon>Proveedoress.cs</DependentUpon>
     </EmbeddedResource>

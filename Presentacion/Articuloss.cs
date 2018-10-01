@@ -52,5 +52,13 @@ namespace Presentacion
             this.Hide();
             artGral.Show();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulos articulos = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+            ArticulosModificar artMod = new ArticulosModificar(articulos);
+            this.Hide();
+            artMod.Show();
+        }
     }
 }

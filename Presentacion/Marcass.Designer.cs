@@ -86,6 +86,7 @@
             this.btnCrearMarca.TabIndex = 53;
             this.btnCrearMarca.Text = "Crear";
             this.btnCrearMarca.UseVisualStyleBackColor = true;
+            this.btnCrearMarca.Click += new System.EventHandler(this.btnCrearMarca_Click);
             // 
             // dgvMarcas
             // 
@@ -110,7 +111,7 @@
             this.btnModificarMarca.Text = "Modificar";
             this.btnModificarMarca.UseVisualStyleBackColor = true;
             // 
-            // Marcas
+            // Marcass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,7 +123,7 @@
             this.Controls.Add(this.btnCrearMarca);
             this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.btnModificarMarca);
-            this.Name = "Marcas";
+            this.Name = "Marcass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";
             this.Load += new System.EventHandler(this.Marcas_Load);
