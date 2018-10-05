@@ -34,7 +34,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnCrearMarca = new System.Windows.Forms.Button();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
-            this.btnModificarMarca = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +48,7 @@
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(664, 236);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(664, 197);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(107, 32);
             this.btnEliminarMarca.TabIndex = 55;
@@ -102,15 +101,6 @@
             this.dgvMarcas.Size = new System.Drawing.Size(631, 298);
             this.dgvMarcas.TabIndex = 57;
             // 
-            // btnModificarMarca
-            // 
-            this.btnModificarMarca.Location = new System.Drawing.Point(664, 197);
-            this.btnModificarMarca.Name = "btnModificarMarca";
-            this.btnModificarMarca.Size = new System.Drawing.Size(107, 33);
-            this.btnModificarMarca.TabIndex = 54;
-            this.btnModificarMarca.Text = "Modificar";
-            this.btnModificarMarca.UseVisualStyleBackColor = true;
-            // 
             // Marcass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,7 +112,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnCrearMarca);
             this.Controls.Add(this.dgvMarcas);
-            this.Controls.Add(this.btnModificarMarca);
             this.Name = "Marcass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";
@@ -141,6 +130,5 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnCrearMarca;
         private System.Windows.Forms.DataGridView dgvMarcas;
-        private System.Windows.Forms.Button btnModificarMarca;
     }
 }
