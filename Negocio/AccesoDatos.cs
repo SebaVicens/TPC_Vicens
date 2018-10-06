@@ -86,5 +86,24 @@ namespace Negocio
                 throw ex;
             }
         }
+     
+        /////////////////     
+
+        public SqlCommand Comando
+        {
+            get { return comando; }
+        }
+
+        public void abrirConexion()
+        {
+            try
+            {
+                conexion.Open();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

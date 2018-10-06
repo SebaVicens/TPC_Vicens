@@ -74,5 +74,25 @@ namespace Negocio
             }
         }
 
+        public void eliminar(int IdMar)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            try
+            {
+                string consulta = "UPDATE MARCAS SET ESTADO = 0 WHERE IDMARCA = " + IdMar;
+
+                conexion.setearConsulta(consulta);
+                conexion.insertar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+        }
     }
 }

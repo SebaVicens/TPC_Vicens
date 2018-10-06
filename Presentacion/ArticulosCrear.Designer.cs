@@ -66,10 +66,12 @@
             // 
             // txtPuCompra
             // 
+            this.txtPuCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPuCompra.Location = new System.Drawing.Point(545, 144);
             this.txtPuCompra.Name = "txtPuCompra";
             this.txtPuCompra.Size = new System.Drawing.Size(183, 20);
             this.txtPuCompra.TabIndex = 1007;
+            this.txtPuCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPuCompra_KeyPress);
             // 
             // label3
             // 
@@ -100,20 +102,25 @@
             // 
             // txtPu
             // 
+            this.txtPu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPu.Location = new System.Drawing.Point(545, 112);
             this.txtPu.Name = "txtPu";
             this.txtPu.Size = new System.Drawing.Size(183, 20);
             this.txtPu.TabIndex = 1006;
+            this.txtPu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPu_KeyPress);
             // 
             // txtOrigen
             // 
+            this.txtOrigen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrigen.Location = new System.Drawing.Point(164, 177);
             this.txtOrigen.Name = "txtOrigen";
             this.txtOrigen.Size = new System.Drawing.Size(183, 20);
             this.txtOrigen.TabIndex = 1004;
+            this.txtOrigen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrigen_KeyPress);
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescripcion.Location = new System.Drawing.Point(164, 79);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(183, 20);
@@ -177,10 +184,12 @@
             // 
             // txtStock
             // 
+            this.txtStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStock.Location = new System.Drawing.Point(545, 79);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(183, 20);
             this.txtStock.TabIndex = 1019;
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
             // 
             // ArticulosCrear
             // 

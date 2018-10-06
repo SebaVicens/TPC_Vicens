@@ -47,7 +47,7 @@ namespace Presentacion
         {
             Localidades aux;
             aux = (Localidades)cbxCodigoPostal.SelectedItem;
-            lblLocalidad.Text = aux.descripcion.ToString();
+            lblLocalidad.Text = aux.Descripcion.ToString();
         }
 
         private void BtnCrearCli_Click(object sender, EventArgs e)
@@ -70,6 +70,7 @@ namespace Presentacion
 
                 clientesCrear.AgregarCliente(cli);
                 MessageBox.Show("Agregado con éxito");
+                
 
             }
             catch (Exception ex)
@@ -88,6 +89,31 @@ namespace Presentacion
                 this.Close();
                 menuPrin.Show();
             }
+        }
+
+        private void btnAddLocalidad_Click(object sender, EventArgs e)
+        {
+            Localidadess ventana = new Localidadess();
+            ventana.ShowDialog();
+
+            LocalidadNegocio ubiacc = new LocalidadNegocio();
+            cbxCodigoPostal.DataSource = ubiacc.listar();
+            cbxCodigoPostal.DisplayMember = "IDLOCALIDAD";
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
         }
     }
 }

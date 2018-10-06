@@ -85,6 +85,7 @@
             this.btnAddLocalidad.TabIndex = 1037;
             this.btnAddLocalidad.Text = "+";
             this.btnAddLocalidad.UseVisualStyleBackColor = true;
+            this.btnAddLocalidad.Click += new System.EventHandler(this.btnAddLocalidad_Click);
             // 
             // cbxCodigoPostal
             // 
@@ -129,20 +130,25 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(183, 101);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(183, 20);
             this.txtNombre.TabIndex = 1033;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtDni
             // 
+            this.txtDni.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDni.Location = new System.Drawing.Point(551, 128);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(183, 20);
             this.txtDni.TabIndex = 1039;
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             // 
             // txtDireccion
             // 
+            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Location = new System.Drawing.Point(183, 160);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(183, 20);
@@ -150,10 +156,12 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Location = new System.Drawing.Point(183, 130);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(183, 20);
             this.txtApellido.TabIndex = 1034;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // label7
             // 

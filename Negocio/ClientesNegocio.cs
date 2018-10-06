@@ -123,5 +123,26 @@ namespace Negocio
                 conexion = null;
             }
         }
+
+        public void eliminar(int IdCli)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            try
+            {
+                string consulta = "UPDATE CLIENTES SET ESTADO = 0 WHERE IDCLIENTE = " + IdCli;
+
+                conexion.setearConsulta(consulta);
+                conexion.insertar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+        }
     }
 }

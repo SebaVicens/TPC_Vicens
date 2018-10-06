@@ -107,5 +107,63 @@ namespace Negocio
             }
         }
 
+        public void ModificarProveedor(Proveedores pro)
+        {
+
+            AccesoDatos conexion = new AccesoDatos();
+
+            string consulta = "UPDATE PROVEEDORES SET CUIT = @CUIT, DESCRIPCION = @DESCRIPCION, DIRECCION = @DIRECCION, IDLOCALIDAD = @IDLOCALIDAD, TELEFONO = @TELEFONO, MAIL = @MAIL, ESTADO = @ESTADO WHERE IDPROVEEDOR = @IDPROVEEDOR";
+
+            try
+            {
+                conexion.limpiarParametros();
+
+                conexion.agregarParametro("@IDPROVEEDOR", pro.IdProveedor);
+                conexion.agregarParametro("@CUIT", pro.Cuit);
+                conexion.agregarParametro("@DESCRIPCION", pro.Descripcion);
+                conexion.agregarParametro("@DIRECCION", pro.Direccion);
+                conexion.agregarParametro("@IDLOCALIDAD", pro.IdLocalidad);
+                conexion.agregarParametro("@TELEFONO", pro.Telefono);
+                conexion.agregarParametro("@MAIL", pro.Mail);
+                conexion.agregarParametro("@ESTADO", pro.Estado);
+
+
+                conexion.setearConsulta(consulta);
+
+
+                conexion.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+        }
+
+        public void eliminar(int IdPro)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            try
+            {
+                string consulta = "UPDATE PROVEEDORES SET ESTADO = 0 WHERE IDPROVEEDOR = " + IdPro;
+
+                conexion.setearConsulta(consulta);
+                conexion.insertar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+        }
+
     }
 }

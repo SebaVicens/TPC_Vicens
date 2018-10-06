@@ -44,6 +44,7 @@ namespace Presentacion
 
                 marcNeg.AgregarMarca(marcas);
                 MessageBox.Show("Agregado con éxito");
+                
 
             }
             catch (Exception ex)
@@ -51,6 +52,11 @@ namespace Presentacion
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void txtIdmarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
         }
     }
 }

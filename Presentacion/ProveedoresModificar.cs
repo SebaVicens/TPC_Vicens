@@ -7,32 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
 using Dominio;
-
+using Negocio;
 
 namespace Presentacion
 {
-    public partial class ProveedoresCrear : Form
+    public partial class ProveedoresModificar : Form
     {
-        public ProveedoresCrear()
+        public ProveedoresModificar()
         {
             InitializeComponent();
         }
 
-        private void ProveedoresCrear_Load(object sender, EventArgs e)
+        private Proveedores proveedores;
+
+        public ProveedoresModificar(Proveedores proveedores)
+        {
+            InitializeComponent();
+            this.proveedores = proveedores;
+        }
+
+        private void ProveedoresModificar_Load(object sender, EventArgs e)
         {
             LocalidadNegocio Loca = new LocalidadNegocio();
+            cbxCodigoPostal.DataSource = Loca.listar();
+            cbxCodigoPostal.DisplayMember = "IDLOCALIDAD";
 
             try
             {
-                cbxCodigoPostal.DataSource = Loca.listar();
-                cbxCodigoPostal.DisplayMember = "IDLOCALIDAD";
+                txtCuit.Text = proveedores.Cuit;
+                txtDescripcion.Text = proveedores.Descripcion;
+                txtDireccion.Text = proveedores.Direccion;
+                cbxCodigoPostal.Text = proveedores.IdLocalidad.ToString();
+                txtTelefono.Text = proveedores.Telefono;
+                txtMail.Text = proveedores.Mail;
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void cbxCodigoPostal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Localidades aux;
+            aux = (Localidades)cbxCodigoPostal.SelectedItem;
+            lblLocalidad.Text = aux.Descripcion.ToString();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -45,31 +67,23 @@ namespace Presentacion
             }
         }
 
-        private void cbxCodigoPostal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Localidades aux;
-            aux = (Localidades)cbxCodigoPostal.SelectedItem;
-            lblLocalidad.Text = aux.Descripcion.ToString();
-        }
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             ProveedoresNegocio ProvCrear = new ProveedoresNegocio();
 
             try
             {
-                Proveedores Prov = new Proveedores();
 
-                Prov.Cuit = txtCuit.Text.Trim();
-                Prov.Descripcion = txtDescripcion.Text.Trim();
-                Prov.Direccion = txtDireccion.Text.Trim();
-                Prov.IdLocalidad = Convert.ToInt32(cbxCodigoPostal.Text.Trim());
-                Prov.Telefono = txtTelefono.Text.Trim();
-                Prov.Mail = txtMail.Text.Trim();
-                Prov.Estado = true;
+                proveedores.Cuit = txtCuit.Text.Trim();
+                proveedores.Descripcion = txtDescripcion.Text.Trim();
+                proveedores.Direccion = txtDireccion.Text.Trim();
+                proveedores.IdLocalidad = Convert.ToInt32(cbxCodigoPostal.Text.Trim());
+                proveedores.Telefono = txtTelefono.Text.Trim();
+                proveedores.Mail = txtMail.Text.Trim();
+                proveedores.Estado = true;
 
-                ProvCrear.AgregarProveedor(Prov);
-                MessageBox.Show("Agregado con éxito");
+                ProvCrear.ModificarProveedor(proveedores);
+                MessageBox.Show("Modificado con éxito");
                 
 
 

@@ -38,6 +38,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(180, 115);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(202, 20);
@@ -75,10 +76,12 @@
             // 
             // txtIdmarca
             // 
+            this.txtIdmarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdmarca.Location = new System.Drawing.Point(180, 72);
             this.txtIdmarca.Name = "txtIdmarca";
-            this.txtIdmarca.Size = new System.Drawing.Size(95, 20);
+            this.txtIdmarca.Size = new System.Drawing.Size(45, 20);
             this.txtIdmarca.TabIndex = 1028;
+            this.txtIdmarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdmarca_KeyPress);
             // 
             // label1
             // 

@@ -76,6 +76,7 @@ namespace Presentacion
 
                 artNeg.AgregarArticulo(articulo);
                 MessageBox.Show("Agregado con éxito");
+                
 
             }
             catch (Exception ex)
@@ -94,6 +95,26 @@ namespace Presentacion
                 this.Close();
                 menuPrin.Show();
             }
+        }
+
+        private void txtOrigen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void txtPu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void txtPuCompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
         }
     }
 }

@@ -55,6 +55,7 @@
             this.btnEliminarCliente.TabIndex = 62;
             this.btnEliminarCliente.Text = "Eliminar";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnSalir
             // 

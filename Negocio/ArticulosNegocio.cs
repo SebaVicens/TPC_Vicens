@@ -55,7 +55,7 @@ namespace Negocio
 
         }
 
-        public void AgregarArticulo (Articulos art)
+        public void AgregarArticulo(Articulos art)
         {
 
             AccesoDatos conexion = new AccesoDatos();
@@ -78,7 +78,7 @@ namespace Negocio
 
                 conexion.setearConsulta(consulta);
 
-             
+
                 conexion.ejecutarAccion();
             }
             catch (Exception ex)
@@ -130,6 +130,25 @@ namespace Negocio
             }
         }
 
+        public void eliminar(int IdArt)
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            try
+            {
+                string consulta = "UPDATE ARTICULOS SET ESTADO = 0 WHERE IDARTICULO = " + IdArt;
 
+                conexion.setearConsulta(consulta);
+                conexion.insertar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace Presentacion
             {
                 dgvClientes.DataSource = clientesListar.listar();
                 dgvClientes.Columns["Estado"].Visible = false;
-                dgvClientes.Columns["IdCliente"].Visible = false;
+                //dgvClientes.Columns["IdCliente"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -56,6 +56,35 @@ namespace Presentacion
             ClientesModificar cliMod = new ClientesModificar(clientes);
             this.Hide();
             cliMod.Show();
+        }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            ClientesNegocio cliNeg = new ClientesNegocio();
+            try
+            {
+                if (dgvClientes.SelectedRows.Count > 0)
+                {
+                    if (MessageBox.Show("Está seguro de que desea eliminar el registro?", "Seguro?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+
+                        Clientes aux = (Clientes)dgvClientes.CurrentRow.DataBoundItem;
+
+                        cliNeg.eliminar(aux.IdCliente);
+                        Clientess cli = new Clientess();
+                        this.Hide();
+                        cli.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un registro");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }   
 }

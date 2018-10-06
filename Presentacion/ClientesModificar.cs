@@ -71,6 +71,7 @@ namespace Presentacion
                 cliNeg.ModificarCliente(cliente);
 
                 MessageBox.Show("Modificado con éxito");
+                
 
             }
             catch (Exception ex)
@@ -94,7 +95,32 @@ namespace Presentacion
         {
             Localidades aux;
             aux = (Localidades)cbxCodigoPostal.SelectedItem;
-            lblLocalidad.Text = aux.descripcion.ToString();
+            lblLocalidad.Text = aux.Descripcion.ToString();
+        }
+
+        private void btnAddLocalidad_Click(object sender, EventArgs e)
+        {
+            Localidadess ventana = new Localidadess();
+            ventana.ShowDialog();
+
+            LocalidadNegocio ubiacc = new LocalidadNegocio();
+            cbxCodigoPostal.DataSource = ubiacc.listar();
+            cbxCodigoPostal.DisplayMember = "IDLOCALIDAD";
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
         }
     }
 }

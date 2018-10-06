@@ -48,5 +48,42 @@ namespace Presentacion
             this.Hide();
             ProvCrear.Show();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Proveedores proveedores = (Proveedores)dgvProv.CurrentRow.DataBoundItem;
+            ProveedoresModificar proMod = new ProveedoresModificar(proveedores);
+            this.Hide();
+            proMod.Show();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ProveedoresNegocio proNeg = new ProveedoresNegocio();
+            try
+            {
+                if (dgvProv.SelectedRows.Count > 0)
+                {
+                    if (MessageBox.Show("Está seguro de que desea eliminar el registro?", "Seguro?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+
+                        Proveedores aux = (Proveedores)dgvProv.CurrentRow.DataBoundItem;
+
+                        proNeg.eliminar(aux.IdProveedor);
+                        Proveedoress pro = new Proveedoress();
+                        this.Hide();
+                        pro.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un registro");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
