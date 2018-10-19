@@ -57,6 +57,16 @@ namespace Presentacion
                 MessageBox.Show("Ingrese Un codigo postal");
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MenuPrincipal menuPrin = new MenuPrincipal();
+                this.Close();
+                menuPrin.Show();
+            }
+        }
     }
     
 }

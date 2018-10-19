@@ -37,7 +37,7 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Decea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MenuPrincipal menuPrin = new MenuPrincipal();
                 this.Close();

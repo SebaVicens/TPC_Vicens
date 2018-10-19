@@ -83,6 +83,12 @@
     <Compile Include="ClientesCrear.Designer.cs">
       <DependentUpon>ClientesCrear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Comprarr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comprarr.Designer.cs">
+      <DependentUpon>Comprarr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Localidadess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesCrear.resx">
       <DependentUpon>ClientesCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comprarr.resx">
+      <DependentUpon>Comprarr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Localidadess.resx">
       <DependentUpon>Localidadess.cs</DependentUpon>

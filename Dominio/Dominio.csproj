@@ -45,6 +45,7 @@
     <Compile Include="CategoriasArticulos.cs" />
     <Compile Include="Clientes.cs" />
     <Compile Include="CompraArticulos.cs" />
+    <Compile Include="Compras.cs" />
     <Compile Include="RegistroCompras.cs" />
     <Compile Include="Localidades.cs" />
     <Compile Include="Marcas.cs" />

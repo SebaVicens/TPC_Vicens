@@ -44,5 +44,12 @@ namespace Presentacion
             this.Hide();
             provListar.Show();
         }
+
+        private void TsmCompras_Click(object sender, EventArgs e)
+        {
+            Comprarr comprarrr = new Comprarr();
+            this.Hide();
+            comprarrr.Show();
+        }
     }
 }

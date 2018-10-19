@@ -150,5 +150,56 @@ namespace Negocio
                 conexion = null;
             }
         }
+        public IList<Articulos> listarxprov(Proveedores auxprov)
+        {
+            IList<Articulos> lista = new List<Articulos>();
+            AccesoDatos conexion = new AccesoDatos();
+
+            try
+            {
+                conexion.limpiarParametros();
+                conexion.setearConsulta("SELECT AR.IDARTICULO, AR.DESCRIPCION, AR.IDMARCA, MA.DESCRIPCION, AR.IDPROVEEDOR, AR.ORIGEN, AR.STOCK, AR.PU, AR.PUCOMPRA,PRO.DESCRIPCION FROM ARTICULOS AS AR INNER JOIN MARCAS AS MA ON AR.IDMARCA = MA.IDMARCA INNER JOIN PROVEEDORES AS PRO ON AR.IDPROVEEDOR=PRO.IDPROVEEDOR WHERE AR.IDPROVEEDOR = @IDPROVEEDOR");
+                conexion.agregarParametro("@IDPROVEEDOR", auxprov.IdProveedor.ToString());
+                //conexion.setearConsulta(consulta);
+                conexion.leerConsulta();
+
+                while (conexion.Lector.Read())
+                {
+                    Articulos aux = new Articulos();
+                    //Luego leo atributo por atributo utilizando el tipo y un índice que está dado por el orden
+                    //que le puse a las columnas en la consulta SQL que hice más arriba.
+                    aux.IdArticulo = conexion.Lector.GetInt32(0);
+                    aux.Descripcion = conexion.Lector.GetString(1);
+                    //por aca articulo además ahora me traigo su marca.
+                    //para poder guardar el nombre de la marca, tengo que hacer new de la misma.
+                    //en este caso lo hacemos en el constructor del articulo
+                    aux.Marca = new Marcas(conexion.Lector.GetInt32(2), conexion.Lector.GetString(3));
+                    aux.Proveedores = new Proveedores(conexion.Lector.GetInt32(4), conexion.Lector.GetString(9));
+                    aux.Origen = conexion.Lector.GetString(5);
+                    aux.Stock = conexion.Lector.GetInt32(6);
+                    aux.Pu = conexion.Lector.GetDecimal(7);
+                    aux.PuCompra = conexion.Lector.GetDecimal(8);
+
+                    //Agrego el objeto a la lista
+                    lista.Add(aux);
+                }
+                //cuando termina devuelvo la lista.
+                return lista;
+
+            }
+            catch (Exception ex)
+            {
+                //si hay alguna excepción la lanzo al nivel superior, a quien me llamó.
+                throw ex;
+            }
+            finally
+            {
+                //por aquí si o si, falle algo o no, cierro la conexión.
+                conexion.cerrarConexion();
+                conexion = null;
+            }
+
+        }
+
     }
 }

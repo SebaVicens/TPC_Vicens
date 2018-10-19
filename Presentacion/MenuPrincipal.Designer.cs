@@ -91,6 +91,7 @@
             this.TsmCompras.Name = "TsmCompras";
             this.TsmCompras.Size = new System.Drawing.Size(76, 20);
             this.TsmCompras.Text = "COMPRAS";
+            this.TsmCompras.Click += new System.EventHandler(this.TsmCompras_Click);
             // 
             // TsmVentas
             // 

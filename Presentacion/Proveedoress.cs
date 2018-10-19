@@ -25,7 +25,7 @@ namespace Presentacion
             try
             {
                 dgvProv.DataSource = provListar.listar();
-                dgvProv.Columns["Descripcion"].Visible = false;
+                //dgvProv.Columns["Descripcion"].Visible = false;
                 dgvProv.Columns["Estado"].Visible = false;
             }
             catch (Exception ex)
