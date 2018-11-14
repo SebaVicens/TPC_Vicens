@@ -98,6 +98,7 @@
             this.TsmVentas.Name = "TsmVentas";
             this.TsmVentas.Size = new System.Drawing.Size(63, 20);
             this.TsmVentas.Text = "VENTAS";
+            this.TsmVentas.Click += new System.EventHandler(this.TsmVentas_Click);
             // 
             // TsmHistorico
             // 

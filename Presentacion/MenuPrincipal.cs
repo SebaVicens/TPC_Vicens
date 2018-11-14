@@ -47,7 +47,14 @@ namespace Presentacion
 
         private void TsmCompras_Click(object sender, EventArgs e)
         {
-            Comprarr comprarrr = new Comprarr();
+            Comprarr ventass = new Comprarr();
+            this.Hide();
+            ventass.Show();
+        }
+
+        private void TsmVentas_Click(object sender, EventArgs e)
+        {
+            Ventass comprarrr = new Ventass();
             this.Hide();
             comprarrr.Show();
         }
