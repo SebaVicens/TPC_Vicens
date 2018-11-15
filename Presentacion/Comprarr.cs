@@ -60,7 +60,7 @@ namespace Presentacion
             ComprasNegocio comprasacc = new ComprasNegocio();
             newidcompra = comprasacc.obtenerId();
 
-            lblCompraID.Text = newidcompra.ToString();
+           
         } // INICIO LA COMPRA
 
         private void cbxArticulos_SelectedIndexChanged(object sender, EventArgs e)

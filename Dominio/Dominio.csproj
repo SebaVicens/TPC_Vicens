@@ -54,6 +54,7 @@
     <Compile Include="Proveedores.cs" />
     <Compile Include="Provincias.cs" />
     <Compile Include="Usuarios.cs" />
+    <Compile Include="UsuariosGerarquia.cs" />
     <Compile Include="VentaArticulos.cs" />
     <Compile Include="RegistroVentas.cs" />
     <Compile Include="Ventas.cs" />

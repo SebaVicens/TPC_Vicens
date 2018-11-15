@@ -95,6 +95,12 @@
     <Compile Include="Localidadess.Designer.cs">
       <DependentUpon>Localidadess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MarcasCrear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,24 @@
     <Compile Include="Proveedoress.Designer.cs">
       <DependentUpon>Proveedoress.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuariosCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosCrear.Designer.cs">
+      <DependentUpon>UsuariosCrear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosModificar.Designer.cs">
+      <DependentUpon>UsuariosModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarioss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarioss.Designer.cs">
+      <DependentUpon>Usuarioss.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validaciones.cs" />
     <Compile Include="Ventass.cs">
       <SubType>Form</SubType>
@@ -164,6 +188,9 @@
     <EmbeddedResource Include="Localidadess.resx">
       <DependentUpon>Localidadess.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MarcasCrear.resx">
       <DependentUpon>MarcasCrear.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +217,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedoress.resx">
       <DependentUpon>Proveedoress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosCrear.resx">
+      <DependentUpon>UsuariosCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuariosModificar.resx">
+      <DependentUpon>UsuariosModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarioss.resx">
+      <DependentUpon>Usuarioss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventass.resx">
       <DependentUpon>Ventass.cs</DependentUpon>

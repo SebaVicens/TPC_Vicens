@@ -29,8 +29,8 @@ namespace Presentacion
             {
                 txtCantidad.Text = "1";
                 TotalVenta = 0;
-                int newidventa = 0;
-                lblAtiende.Text = "1";// agregar login
+
+                lblAtiende.Text = Login.Userlogin.Nombre.ToString();
                 ArticulosNegocio articuloslista = new ArticulosNegocio();
                 ClientesNegocio clienteslista = new ClientesNegocio();
                 cbxCliente.DataSource = clienteslista.listar();
@@ -133,13 +133,10 @@ namespace Presentacion
                         else
                         {
                             MessageBox.Show("No Existe Sufuciente stock");
-
                         }
 
                         existe = true;
-
                     }
-
 
                 }
 
@@ -221,7 +218,7 @@ namespace Presentacion
 
                     auxclie = (Clientes)cbxCliente.SelectedItem;
 
-                    nuevaventa.IdUsuario = 1;// agregar login
+                    nuevaventa.IdUsuario = Login.Userlogin.idusuario;
                     nuevaventa.IdCliente = auxclie.IdCliente;
                     nuevaventa.Fecha = dtpFechaFactura.Value;
                     venta.Generarventa(nuevaventa);

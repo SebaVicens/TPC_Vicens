@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnModificarArt = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -52,22 +51,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvNventas)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnModificarArt
-            // 
-            this.btnModificarArt.Location = new System.Drawing.Point(371, 139);
-            this.btnModificarArt.Name = "btnModificarArt";
-            this.btnModificarArt.Size = new System.Drawing.Size(120, 20);
-            this.btnModificarArt.TabIndex = 1046;
-            this.btnModificarArt.Text = "Modificar Articulo";
-            this.btnModificarArt.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(50, 95);
+            this.label6.Location = new System.Drawing.Point(50, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 1040;
@@ -275,7 +265,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnModificarArt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtStock);
@@ -307,8 +296,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnModificarArt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtStock;

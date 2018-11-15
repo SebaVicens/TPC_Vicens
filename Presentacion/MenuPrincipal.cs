@@ -58,5 +58,18 @@ namespace Presentacion
             this.Hide();
             comprarrr.Show();
         }
+
+        private void TsmUsuarios_Click(object sender, EventArgs e)
+        {
+            Usuarioss usuarios = new Usuarioss();
+            this.Hide();
+            usuarios.Show();
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.ShowDialog();
+        }
     }
 }

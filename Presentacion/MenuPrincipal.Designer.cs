@@ -111,6 +111,7 @@
             this.TsmUsuarios.Name = "TsmUsuarios";
             this.TsmUsuarios.Size = new System.Drawing.Size(80, 20);
             this.TsmUsuarios.Text = "USUARIOS";
+            this.TsmUsuarios.Click += new System.EventHandler(this.TsmUsuarios_Click);
             // 
             // MenuPrincipal
             // 
@@ -122,6 +123,7 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU PRINCIPAL";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

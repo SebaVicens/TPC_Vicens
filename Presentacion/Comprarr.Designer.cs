@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnModificarArt = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCompra = new System.Windows.Forms.TextBox();
@@ -51,19 +50,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DgvCompras = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.lblCompraID = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblusuariocomp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCompras)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnModificarArt
-            // 
-            this.btnModificarArt.Location = new System.Drawing.Point(330, 183);
-            this.btnModificarArt.Name = "btnModificarArt";
-            this.btnModificarArt.Size = new System.Drawing.Size(247, 20);
-            this.btnModificarArt.TabIndex = 945;
-            this.btnModificarArt.Text = "Modificar Articulo";
-            this.btnModificarArt.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -287,35 +276,21 @@
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // lblCompraID
+            // lblusuariocomp
             // 
-            this.lblCompraID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCompraID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompraID.Location = new System.Drawing.Point(412, 40);
-            this.lblCompraID.Name = "lblCompraID";
-            this.lblCompraID.Size = new System.Drawing.Size(203, 37);
-            this.lblCompraID.TabIndex = 947;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(471, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 18);
-            this.label3.TabIndex = 946;
-            this.label3.Text = "Compra N°";
+            this.lblusuariocomp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblusuariocomp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuariocomp.Location = new System.Drawing.Point(333, 28);
+            this.lblusuariocomp.Name = "lblusuariocomp";
+            this.lblusuariocomp.Size = new System.Drawing.Size(198, 20);
+            this.lblusuariocomp.TabIndex = 945;
             // 
             // Comprarr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 492);
-            this.Controls.Add(this.lblCompraID);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnModificarArt);
+            this.Controls.Add(this.lblusuariocomp);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCompra);
@@ -349,8 +324,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnModificarArt;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCompra;
@@ -373,7 +346,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DgvCompras;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.Label lblCompraID;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblusuariocomp;
     }
 }
