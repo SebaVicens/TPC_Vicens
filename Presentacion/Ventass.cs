@@ -60,6 +60,7 @@ namespace Presentacion
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            cbxCliente.Enabled = false;
             bool existe = false;
 
             VentaArticulos nuevo = new VentaArticulos();
@@ -113,6 +114,7 @@ namespace Presentacion
                         stockp = ventaacc.ConsultarStock(nuevo.Articulos.IdArticulo);
                         Decimal montoanterior;
                         montoanterior = fila.PuSubtotal;
+
                         if (fila.Cantidad + Convert.ToInt32(txtCantidad.Text) <= stockp)
                         {
                             fila.Pu = nuevo.Articulos.Pu;

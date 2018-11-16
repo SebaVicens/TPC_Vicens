@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCantidadClientes = new System.Windows.Forms.Label();
             this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -37,15 +36,6 @@
             this.btnModificarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCantidadClientes
-            // 
-            this.lblCantidadClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidadClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadClientes.Location = new System.Drawing.Point(12, 33);
-            this.lblCantidadClientes.Name = "lblCantidadClientes";
-            this.lblCantidadClientes.Size = new System.Drawing.Size(61, 28);
-            this.lblCantidadClientes.TabIndex = 66;
             // 
             // btnEliminarCliente
             // 
@@ -118,7 +108,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblCantidadClientes);
             this.Controls.Add(this.btnEliminarCliente);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label10);
@@ -136,8 +125,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCantidadClientes;
         private System.Windows.Forms.Button btnEliminarCliente;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label10;

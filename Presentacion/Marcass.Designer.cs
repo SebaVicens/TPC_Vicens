@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCantidadMarcas = new System.Windows.Forms.Label();
             this.btnEliminarMarca = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -36,15 +35,6 @@
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCantidadMarcas
-            // 
-            this.lblCantidadMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidadMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadMarcas.Location = new System.Drawing.Point(12, 34);
-            this.lblCantidadMarcas.Name = "lblCantidadMarcas";
-            this.lblCantidadMarcas.Size = new System.Drawing.Size(61, 28);
-            this.lblCantidadMarcas.TabIndex = 59;
             // 
             // btnEliminarMarca
             // 
@@ -107,7 +97,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblCantidadMarcas);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label10);
@@ -124,8 +113,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCantidadMarcas;
         private System.Windows.Forms.Button btnEliminarMarca;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label10;

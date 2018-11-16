@@ -19,9 +19,7 @@ namespace Presentacion
 
         private void TsmArticulos_Click(object sender, EventArgs e)
         {
-            Articuloss articulosListar = new Articuloss();
-            
-            articulosListar.Show();
+
         }
 
         private void mARCASToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +68,25 @@ namespace Presentacion
         {
             Login log = new Login();
             log.ShowDialog();
+        }
+
+        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aRTICULOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Articuloss articulosListar = new Articuloss();
+
+            articulosListar.Show();
+        }
+
+        private void cATEGXARTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CategoriasArticuloss catar = new CategoriasArticuloss();
+
+            catar.Show();
         }
     }
 }

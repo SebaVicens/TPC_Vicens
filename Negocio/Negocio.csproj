@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="ArticulosNegocio.cs" />
+    <Compile Include="CategoriasNegocio.cs" />
     <Compile Include="ClientesNegocio.cs" />
     <Compile Include="ComprasNegocio.cs" />
     <Compile Include="LocalidadNegocio.cs" />

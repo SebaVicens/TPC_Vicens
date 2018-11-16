@@ -54,6 +54,7 @@
             // 
             // txtDni
             // 
+            this.txtDni.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDni.Location = new System.Drawing.Point(164, 80);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(185, 20);
@@ -85,17 +86,21 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Location = new System.Drawing.Point(164, 54);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(185, 20);
             this.txtApellido.TabIndex = 1037;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(164, 28);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(185, 20);
             this.txtNombre.TabIndex = 1036;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblLocalidad
             // 
@@ -132,6 +137,7 @@
             // 
             // cbxGerarquia
             // 
+            this.cbxGerarquia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGerarquia.FormattingEnabled = true;
             this.cbxGerarquia.Location = new System.Drawing.Point(164, 261);
             this.cbxGerarquia.Name = "cbxGerarquia";

@@ -18,6 +18,16 @@ namespace Dominio
         public decimal PuCompra { get; set; }
         public bool Estado { get; set; }
 
+        public Articulos()
+        {
+        }
+
+        public Articulos(int id, string desc)
+        {
+            IdArticulo = id;
+            Descripcion = desc;
+        }
+
 
         public override string ToString()
         {

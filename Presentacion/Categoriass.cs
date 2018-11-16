@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
 using Dominio;
+using Negocio;
 
 namespace Presentacion
 {
-    public partial class MarcasCrear : Form
+    public partial class Categoriass : Form
     {
-        public MarcasCrear()
+        public Categoriass()
         {
             InitializeComponent();
         }
@@ -23,31 +23,28 @@ namespace Presentacion
         {
             if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Marcass mar = new Marcass();
+                CategoriasArticuloss catt = new CategoriasArticuloss();
                 this.Close();
-                mar.Show();
+                catt.Show();
             }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            MarcasNegocio marcNeg = new MarcasNegocio();
-
             try
             {
 
-                Marcas marcas = new Marcas();
+                CategoriasNegocio catneg = new CategoriasNegocio();
+                CategoriasArticulos catnueva = new CategoriasArticulos();
 
-                marcas.IdMarca = Convert.ToInt32(txtIdmarca.Text.Trim());
-                marcas.Descripcion = txtNombre.Text.Trim();
-                marcas.Estado = true;
+                catnueva.Descripcion = txtCateg.Text.Trim();
+                catnueva.Estado = true;
 
-                marcNeg.AgregarMarca(marcas);
-                MessageBox.Show("Agregado con éxito");
-                Marcass mar = new Marcass();
+                catneg.agregarcategoria(catnueva);
+                MessageBox.Show("Categoria Agregada con Exito");
+                CategoriasArticuloss catt = new CategoriasArticuloss();
                 this.Close();
-                mar.Show();
-
+                catt.Show();
             }
             catch (Exception ex)
             {
@@ -55,11 +52,5 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-
-        private void txtIdmarca_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validaciones.SoloNumeros(e);
-        }
-
     }
 }

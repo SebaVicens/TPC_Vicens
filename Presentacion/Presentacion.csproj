@@ -65,6 +65,18 @@
     <Compile Include="ArticulosCrear.Designer.cs">
       <DependentUpon>ArticulosCrear.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoriasArticuloss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriasArticuloss.Designer.cs">
+      <DependentUpon>CategoriasArticuloss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoriass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoriass.Designer.cs">
+      <DependentUpon>Categoriass.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientesModificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ArticulosCrear.resx">
       <DependentUpon>ArticulosCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriasArticuloss.resx">
+      <DependentUpon>CategoriasArticuloss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categoriass.resx">
+      <DependentUpon>Categoriass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientesModificar.resx">
       <DependentUpon>ClientesModificar.cs</DependentUpon>

@@ -62,6 +62,8 @@ namespace Presentacion
             ComprasNegocio comprasacc = new ComprasNegocio();
             newidcompra = comprasacc.obtenerId();
 
+            cbxproveedor.Enabled = false;
+
            
         } // INICIO LA COMPRA
 

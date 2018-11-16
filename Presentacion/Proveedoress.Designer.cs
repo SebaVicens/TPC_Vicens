@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCantidadProv = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -37,15 +36,6 @@
             this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCantidadProv
-            // 
-            this.lblCantidadProv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidadProv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadProv.Location = new System.Drawing.Point(12, 36);
-            this.lblCantidadProv.Name = "lblCantidadProv";
-            this.lblCantidadProv.Size = new System.Drawing.Size(61, 28);
-            this.lblCantidadProv.TabIndex = 59;
             // 
             // btnEliminar
             // 
@@ -118,7 +108,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblCantidadProv);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label10);
@@ -136,8 +125,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCantidadProv;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label10;

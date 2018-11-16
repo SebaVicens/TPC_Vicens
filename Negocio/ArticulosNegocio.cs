@@ -55,6 +55,33 @@ namespace Negocio
 
         }
 
+        public IList<Articulos> listar2()
+        {
+            AccesoDatos conexion = new AccesoDatos();
+            IList<Articulos> lista = new List<Articulos>();
+
+            try
+            {
+                conexion.setearConsulta("SELECT IDARTICULO, DESCRIPCION FROM ARTICULOS WHERE ESTADO = 1");
+                conexion.leerConsulta();
+
+                while (conexion.Lector.Read())
+                {
+                    Articulos aux = new Articulos();
+
+                    aux.IdArticulo = conexion.Lector.GetInt32(0);
+                    aux.Descripcion = conexion.Lector.GetString(1);
+
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void AgregarArticulo(Articulos art)
         {
 

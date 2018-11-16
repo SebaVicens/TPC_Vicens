@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCantidarArticulos = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -37,15 +36,6 @@
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCantidarArticulos
-            // 
-            this.lblCantidarArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidarArticulos.Location = new System.Drawing.Point(12, 35);
-            this.lblCantidarArticulos.Name = "lblCantidarArticulos";
-            this.lblCantidarArticulos.Size = new System.Drawing.Size(61, 28);
-            this.lblCantidarArticulos.TabIndex = 52;
             // 
             // btnEliminar
             // 
@@ -59,7 +49,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(664, 309);
+            this.btnSalir.Location = new System.Drawing.Point(664, 350);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 33);
             this.btnSalir.TabIndex = 49;
@@ -119,7 +109,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvArticulos);
-            this.Controls.Add(this.lblCantidarArticulos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label10);
@@ -136,8 +125,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCantidarArticulos;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label10;

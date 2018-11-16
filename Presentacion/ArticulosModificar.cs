@@ -77,9 +77,9 @@ namespace Presentacion
                 artNeg.ModificarArticulo(articulos);
 
                 MessageBox.Show("Modificado con éxito");
-                Clientess clie = new Clientess();
+                Articuloss art = new Articuloss();
                 this.Close();
-                clie.Show();
+                art.Show();
 
             }
             catch (Exception ex)

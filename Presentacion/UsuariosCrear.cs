@@ -92,5 +92,15 @@ namespace Presentacion
                 us.Show();
             }
         }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
     }
 }
