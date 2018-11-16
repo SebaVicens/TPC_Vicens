@@ -39,9 +39,11 @@ namespace Presentacion
         {
             if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MenuPrincipal menuPrin = new MenuPrincipal();
+
+                Proveedoress pro = new Proveedoress();
                 this.Close();
-                menuPrin.Show();
+                pro.Show();
+
             }
         }
 
@@ -70,8 +72,10 @@ namespace Presentacion
 
                 ProvCrear.AgregarProveedor(Prov);
                 MessageBox.Show("Agregado con éxito");
-                
 
+                Proveedoress pro = new Proveedoress();
+                this.Close();
+                pro.Show();
 
             }
             catch (Exception ex)

@@ -33,6 +33,8 @@ namespace Presentacion
                 lblTotal.Text = "0";
                 TotalCompra = 0;
 
+                lblusuariocomp.Text = Login.Userlogin.Nombre.ToString();
+
                 ProveedoresNegocio provelista = new ProveedoresNegocio();
                 cbxproveedor.DataSource = provelista.listar2();
                 cbxproveedor.DisplayMember = "DESCRIPCION";
@@ -96,6 +98,9 @@ namespace Presentacion
             else
             {
                 MessageBox.Show("No posee articulos para eliminar");
+                                 
+                this.Close();
+               
             }
         }  // ELIMINAR ARTICULO DE LA GRILLA
 
@@ -210,8 +215,7 @@ namespace Presentacion
 
                     auxprov = (Proveedores)cbxproveedor.SelectedItem;
 
-                    //nuevacompra.IdUsuario = NewLogin.Userlogin.idusuario;
-                    nuevacompra.IdUsuario = 1;
+                    nuevacompra.IdUsuario = Login.Userlogin.idusuario;
                     nuevacompra.IdProveedor = auxprov.IdProveedor;
                     nuevacompra.Fecha = dtpFechaCompra.Value;
                     compras.Generarcompra(nuevacompra);
@@ -228,9 +232,7 @@ namespace Presentacion
                     }
 
                     MessageBox.Show("Compra Realizada");
-                    MenuPrincipal menuPrin = new MenuPrincipal();
-                    this.Hide();
-                    menuPrin.Show();
+                    this.Close();
                 }
 
 
@@ -249,9 +251,7 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrin = new MenuPrincipal();
-            this.Hide();
-            menuPrin.Show();
+            this.Close();
         }
     }   
 }

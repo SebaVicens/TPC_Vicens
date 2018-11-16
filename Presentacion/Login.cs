@@ -40,7 +40,9 @@ namespace Presentacion
             if (Userlogin.password == TxtPass.Text)
             {
                 MessageBox.Show("Bienvenido");
+
                 this.Close();
+                                
             }
             else
             {

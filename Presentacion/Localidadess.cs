@@ -45,7 +45,7 @@ namespace Presentacion
 
                     ubiacc.agregarlocalidad(nlocalidad);
                     MessageBox.Show("Localidad Agregada con Exito");
-                    Close();
+                    this.Close();
                 }
                 catch
                 {
@@ -62,9 +62,7 @@ namespace Presentacion
         {
             if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MenuPrincipal menuPrin = new MenuPrincipal();
                 this.Close();
-                menuPrin.Show();
             }
         }
     }

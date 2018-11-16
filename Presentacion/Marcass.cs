@@ -39,15 +39,13 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrin = new MenuPrincipal();
-            this.Hide();
-            menuPrin.Show();
+            this.Close();
         }
 
         private void btnCrearMarca_Click(object sender, EventArgs e)
         {
             MarcasCrear marcaCrear = new MarcasCrear();
-            this.Hide();
+            this.Close();
             marcaCrear.Show();
         }
 

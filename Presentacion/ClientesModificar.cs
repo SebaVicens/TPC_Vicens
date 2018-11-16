@@ -71,7 +71,9 @@ namespace Presentacion
                 cliNeg.ModificarCliente(cliente);
 
                 MessageBox.Show("Modificado con éxito");
-                
+                Clientess clie = new Clientess();
+                this.Close();
+                clie.Show();
 
             }
             catch (Exception ex)
@@ -85,9 +87,9 @@ namespace Presentacion
         {
             if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MenuPrincipal menuPrin = new MenuPrincipal();
+                Clientess clie = new Clientess();
                 this.Close();
-                menuPrin.Show();
+                clie.Show();
             }
         }
 

@@ -150,6 +150,7 @@ namespace Negocio
                 conexion = null;
             }
         }
+
         public IList<Articulos> listarxprov(Proveedores auxprov)
         {
             IList<Articulos> lista = new List<Articulos>();
@@ -158,7 +159,7 @@ namespace Negocio
             try
             {
                 conexion.limpiarParametros();
-                conexion.setearConsulta("SELECT AR.IDARTICULO, AR.DESCRIPCION, AR.IDMARCA, MA.DESCRIPCION, AR.IDPROVEEDOR, AR.ORIGEN, AR.STOCK, AR.PU, AR.PUCOMPRA,PRO.DESCRIPCION FROM ARTICULOS AS AR INNER JOIN MARCAS AS MA ON AR.IDMARCA = MA.IDMARCA INNER JOIN PROVEEDORES AS PRO ON AR.IDPROVEEDOR=PRO.IDPROVEEDOR WHERE AR.IDPROVEEDOR = @IDPROVEEDOR");
+                conexion.setearConsulta("SELECT AR.IDARTICULO, AR.DESCRIPCION, AR.IDMARCA, MA.DESCRIPCION, AR.IDPROVEEDOR, AR.ORIGEN, AR.STOCK, AR.PU, AR.PUCOMPRA,PRO.DESCRIPCION FROM ARTICULOS AS AR INNER JOIN MARCAS AS MA ON AR.IDMARCA = MA.IDMARCA INNER JOIN PROVEEDORES AS PRO ON AR.IDPROVEEDOR=PRO.IDPROVEEDOR WHERE AR.IDPROVEEDOR = @IDPROVEEDOR AND AR.ESTADO = 1");
                 conexion.agregarParametro("@IDPROVEEDOR", auxprov.IdProveedor.ToString());
          
                 conexion.leerConsulta();

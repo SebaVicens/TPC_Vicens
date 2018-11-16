@@ -38,15 +38,13 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrin = new MenuPrincipal();
-            this.Hide();
-            menuPrin.Show();
+            this.Close();
         }
 
         private void btnCrearCliente_Click(object sender, EventArgs e)
         {
             ClientesCrear cli = new ClientesCrear();
-            this.Hide();
+            this.Close();
             cli.Show();
         }
 
@@ -54,7 +52,7 @@ namespace Presentacion
         {
             Clientes clientes = (Clientes)dgvClientes.CurrentRow.DataBoundItem;
             ClientesModificar cliMod = new ClientesModificar(clientes);
-            this.Hide();
+            this.Close();
             cliMod.Show();
         }
 
@@ -72,7 +70,7 @@ namespace Presentacion
 
                         cliNeg.eliminar(aux.IdCliente);
                         Clientess cli = new Clientess();
-                        this.Hide();
+                        this.Close();
                         cli.Show();
                     }
                 }

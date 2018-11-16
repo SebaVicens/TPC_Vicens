@@ -61,9 +61,11 @@ namespace Presentacion
         private void btnCargar_Click(object sender, EventArgs e)
         {
             bool existe = false;
+
             VentaArticulos nuevo = new VentaArticulos();
 
             int newidventa = 0;
+
             VentasNegocio ventaacc = new VentasNegocio();
             newidventa = ventaacc.obtenerId();
 
@@ -82,8 +84,6 @@ namespace Presentacion
                     nuevo.Cantidad = Convert.ToInt32(txtCantidad.Text);
                     nuevo.Pu = nuevo.Articulos.Pu;
                     nuevo.PuSubtotal = nuevo.Cantidad * nuevo.Pu;
-
-
 
                     listaDetalleVenta.Add(nuevo);
 
@@ -199,9 +199,7 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrin = new MenuPrincipal();
-            this.Hide();
-            menuPrin.Show();
+            this.Close();
         }
 
         private void btnFacturar_Click(object sender, EventArgs e)
@@ -235,9 +233,7 @@ namespace Presentacion
                     }
 
                     MessageBox.Show("Venta Generada");
-                    MenuPrincipal menuPrin = new MenuPrincipal();
-                    this.Hide();
-                    menuPrin.Show();
+                    this.Close();
 
                 }
 
@@ -254,6 +250,7 @@ namespace Presentacion
                 throw;
             }
         }
+
     }
     
 }

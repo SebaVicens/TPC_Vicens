@@ -23,9 +23,9 @@ namespace Presentacion
         {
             if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MenuPrincipal menuPrin = new MenuPrincipal();
+                Marcass mar = new Marcass();
                 this.Close();
-                menuPrin.Show();
+                mar.Show();
             }
         }
 
@@ -44,7 +44,9 @@ namespace Presentacion
 
                 marcNeg.AgregarMarca(marcas);
                 MessageBox.Show("Agregado con éxito");
-                
+                Marcass mar = new Marcass();
+                this.Close();
+                mar.Show();
 
             }
             catch (Exception ex)

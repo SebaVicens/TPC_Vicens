@@ -76,7 +76,9 @@ namespace Presentacion
 
                 artNeg.AgregarArticulo(articulo);
                 MessageBox.Show("Agregado con éxito");
-                
+                Articuloss art = new Articuloss();
+                this.Close();
+                art.Show();
 
             }
             catch (Exception ex)
@@ -91,9 +93,9 @@ namespace Presentacion
         {
             if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MenuPrincipal menuPrin = new MenuPrincipal();
+                Articuloss art = new Articuloss();
                 this.Close();
-                menuPrin.Show();
+                art.Show();
             }
         }
 

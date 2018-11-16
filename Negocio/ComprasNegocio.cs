@@ -130,14 +130,12 @@ namespace Negocio
         public void ActualizarStock(CompraArticulos vaux)
         {
             AccesoDatos conexion = new AccesoDatos();
-            string consulta = "UPDATE ARTICULOS SET STOCK=STOCK-@CANTIDAD WHERE IDARTICULO=@IDARTICULO";
+            string consulta = "UPDATE ARTICULOS SET STOCK=STOCK+@CANTIDAD WHERE IDARTICULO=@IDARTICULO";
             try
             {
                 conexion.limpiarParametros();
-                conexion.agregarParametro("@IDCOMPRA", vaux.IdCompra.ToString());
                 conexion.agregarParametro("@IDARTICULO", vaux.IdArticulo.ToString());
                 conexion.agregarParametro("@CANTIDAD", vaux.Cantidad.ToString());
-                conexion.agregarParametro("@PU", vaux.Pu.ToString().Replace(",", "."));
                 conexion.setearConsulta(consulta);
                 conexion.ejecutarAccion();
             }

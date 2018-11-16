@@ -41,9 +41,9 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menuPrin = new MenuPrincipal();
-            this.Hide();
-            menuPrin.Show();
+
+            this.Close();
+
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
