@@ -77,9 +77,11 @@ namespace Presentacion
                 artNeg.ModificarArticulo(articulos);
 
                 MessageBox.Show("Modificado con éxito");
+
                 Articuloss art = new Articuloss();
                 this.Close();
                 art.Show();
+
 
             }
             catch (Exception ex)
@@ -94,9 +96,9 @@ namespace Presentacion
         {
             if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Articuloss art = new Articuloss();
+
                 this.Close();
-                art.Show();
+
             }
         }
 
@@ -119,5 +121,6 @@ namespace Presentacion
         {
             Validaciones.SoloNumeros(e);
         }
+
     }
 }

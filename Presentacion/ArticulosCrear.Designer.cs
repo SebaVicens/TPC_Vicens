@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArticulosCrear));
             this.cbxMarca = new System.Windows.Forms.ComboBox();
             this.cbxProveedor = new System.Windows.Forms.ComboBox();
             this.txtPuCompra = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.txtPu = new System.Windows.Forms.TextBox();
             this.txtOrigen = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             // txtPuCompra
             // 
             this.txtPuCompra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPuCompra.Location = new System.Drawing.Point(545, 144);
+            this.txtPuCompra.Location = new System.Drawing.Point(545, 112);
             this.txtPuCompra.Name = "txtPuCompra";
             this.txtPuCompra.Size = new System.Drawing.Size(183, 20);
             this.txtPuCompra.TabIndex = 1007;
@@ -76,34 +76,40 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(436, 147);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(403, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.Size = new System.Drawing.Size(120, 15);
             this.label3.TabIndex = 1016;
             this.label3.Text = "PRECIO COMPRA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 119);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(51, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(92, 15);
             this.label2.TabIndex = 1015;
             this.label2.Text = "PROVEEDOR";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 151);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(81, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 1014;
             this.label1.Text = "MARCA";
             // 
             // txtPu
             // 
             this.txtPu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPu.Location = new System.Drawing.Point(545, 112);
+            this.txtPu.Location = new System.Drawing.Point(545, 145);
             this.txtPu.Name = "txtPu";
             this.txtPu.Size = new System.Drawing.Size(183, 20);
             this.txtPu.TabIndex = 1006;
@@ -126,39 +132,36 @@
             this.txtDescripcion.Size = new System.Drawing.Size(183, 20);
             this.txtDescripcion.TabIndex = 1001;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(446, 115);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 13);
-            this.label13.TabIndex = 1013;
-            this.label13.Text = "PRECIO VENTA";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(489, 86);
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(456, 83);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 13);
+            this.label12.Size = new System.Drawing.Size(52, 15);
             this.label12.TabIndex = 1012;
             this.label12.Text = "STOCK";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(102, 184);
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(77, 177);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 13);
+            this.label11.Size = new System.Drawing.Size(60, 15);
             this.label11.TabIndex = 1011;
             this.label11.Text = "ORIGEN";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(71, 86);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(46, 79);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 13);
+            this.label8.Size = new System.Drawing.Size(100, 15);
             this.label8.TabIndex = 1010;
             this.label8.Text = "DESCRIPCION";
             // 
@@ -195,6 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.cbxMarca);
@@ -206,7 +210,6 @@
             this.Controls.Add(this.txtPu);
             this.Controls.Add(this.txtOrigen);
             this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
@@ -231,7 +234,6 @@
         private System.Windows.Forms.TextBox txtPu;
         private System.Windows.Forms.TextBox txtOrigen;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;

@@ -151,6 +151,12 @@
     <Compile Include="Proveedoress.Designer.cs">
       <DependentUpon>Proveedoress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportess.Designer.cs">
+      <DependentUpon>Reportess.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuariosCrear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="Proveedoress.resx">
       <DependentUpon>Proveedoress.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportess.resx">
+      <DependentUpon>Reportess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuariosCrear.resx">
       <DependentUpon>UsuariosCrear.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +279,35 @@
       <Project>{cf872c0a-9ebf-410e-bf2e-f3cb08ec6b1e}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

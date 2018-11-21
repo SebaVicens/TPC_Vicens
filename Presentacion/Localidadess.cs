@@ -65,6 +65,11 @@ namespace Presentacion
                 this.Close();
             }
         }
+
+        private void txtCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
     }
     
 }

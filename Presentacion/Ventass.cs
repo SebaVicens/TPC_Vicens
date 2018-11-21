@@ -61,6 +61,7 @@ namespace Presentacion
         private void btnCargar_Click(object sender, EventArgs e)
         {
             cbxCliente.Enabled = false;
+
             bool existe = false;
 
             VentaArticulos nuevo = new VentaArticulos();
@@ -211,7 +212,7 @@ namespace Presentacion
 
                 if (dgvNventas.RowCount > 0)
                 {
-                    // -- GenerarVenta -- //
+                    // GENERO LA VENTA
                     VentasNegocio venta = new VentasNegocio();
                     Ventas nuevaventa = new Ventas();
                     Clientes auxclie;
@@ -224,7 +225,7 @@ namespace Presentacion
                     venta.Generarventa(nuevaventa);
 
 
-                    // -- Detalle de Venta -- //
+                    // DETALLE DE VENTA
 
                     VentaArticulos artxventa = new VentaArticulos();
 

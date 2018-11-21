@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Dominio;
+using static System.Math;
 
 namespace Presentacion
 {
     public partial class ArticulosCrear : Form
     {
-        public ArticulosCrear()     
+        public ArticulosCrear()
         {
             InitializeComponent();
         }
@@ -31,6 +32,8 @@ namespace Presentacion
         private void ArticulosGral_Load(object sender, EventArgs e)
         {
             MarcasNegocio marc = new MarcasNegocio();
+            txtPu.Enabled = false;
+            txtPu.Visible = false;
 
             try
             {
@@ -62,6 +65,10 @@ namespace Presentacion
 
             try
             {
+                decimal primernumero = int.Parse(txtPuCompra.Text);
+                decimal segundonumero = 1.2m;
+                decimal resultado;
+                resultado = primernumero * segundonumero;
 
                 Articulos articulo = new Articulos();
 
@@ -70,8 +77,8 @@ namespace Presentacion
                 articulo.Marca = (Marcas)cbxMarca.SelectedItem;
                 articulo.Origen = txtOrigen.Text.Trim();
                 articulo.Stock = Convert.ToInt32(txtStock.Text.Trim());
-                articulo.Pu = Convert.ToInt32(txtPu.Text.Trim());
                 articulo.PuCompra = Convert.ToInt32(txtPuCompra.Text.Trim());
+                articulo.Pu = resultado;
                 articulo.Estado = true;
 
                 artNeg.AgregarArticulo(articulo);
@@ -118,5 +125,6 @@ namespace Presentacion
         {
             Validaciones.SoloNumeros(e);
         }
+
     }
 }

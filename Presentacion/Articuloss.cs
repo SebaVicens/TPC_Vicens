@@ -29,7 +29,7 @@ namespace Presentacion
                 dgvArticulos.DataSource = artListar.listar();
                
                 dgvArticulos.Columns["Proveedores"].Visible = false;
-                dgvArticulos.Columns["PuCompra"].Visible = false;
+                //dgvArticulos.Columns["PuCompra"].Visible = false;
                 dgvArticulos.Columns["Estado"].Visible = false;
             }
             catch (Exception ex)

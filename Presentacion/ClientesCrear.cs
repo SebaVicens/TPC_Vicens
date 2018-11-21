@@ -70,6 +70,7 @@ namespace Presentacion
 
                 clientesCrear.AgregarCliente(cli);
                 MessageBox.Show("Agregado con éxito");
+
                 Clientess clie = new Clientess();
                 this.Close();
                 clie.Show();

@@ -88,5 +88,12 @@ namespace Presentacion
 
             catar.Show();
         }
+
+        private void rEPORTESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportess rep = new Reportess();
+
+            rep.Show();
+        }
     }
 }

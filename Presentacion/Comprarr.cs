@@ -25,6 +25,13 @@ namespace Presentacion
         private void Comprarr_Load(object sender, EventArgs e)
         {
 
+            btnModificarArt.Enabled = false;
+            txtCantidad.Enabled = false;
+            btnCargar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnCompra.Enabled = false;
+
+
             try
             {
                 List<CompraArticulos> listaDetallecompra2 = new List<CompraArticulos>(); //
@@ -53,18 +60,19 @@ namespace Presentacion
             Proveedores auxprov = new Proveedores();
             auxprov = (Proveedores)cbxproveedor.SelectedItem;
 
-            int newidcompra = 0;
 
             txtCantidad.Text = "1";
             ArticulosNegocio articuloslista = new ArticulosNegocio();
             cbxArticulos.DataSource = articuloslista.listarxprov(auxprov);
 
-            ComprasNegocio comprasacc = new ComprasNegocio();
-            newidcompra = comprasacc.obtenerId();
-
             cbxproveedor.Enabled = false;
+            btnModificarArt.Enabled = true;
+            txtCantidad.Enabled = true;
+            btnCargar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnCompra.Enabled = true;
 
-           
+
         } // INICIO LA COMPRA
 
         private void cbxArticulos_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,10 +107,7 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("No posee articulos para eliminar");
-                                 
-                this.Close();
-               
+                MessageBox.Show("No posee articulos para eliminar");                                          
             }
         }  // ELIMINAR ARTICULO DE LA GRILLA
 
@@ -210,7 +215,7 @@ namespace Presentacion
 
                 if (DgvCompras.RowCount > 0)
                 {
-                    // GenerarCompra 
+                    // GENERO LA COMPRA 
                     ComprasNegocio compras = new ComprasNegocio();
                     Compras nuevacompra = new Compras();
                     Proveedores auxprov;
@@ -223,7 +228,7 @@ namespace Presentacion
                     compras.Generarcompra(nuevacompra);
 
 
-                    // Detalle de Venta
+                    // DETALLE DE COMPRA
 
                     CompraArticulos artxcompra = new CompraArticulos();
 
@@ -253,7 +258,25 @@ namespace Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Desea Salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+
+                this.Close();
+
+            }
+        }
+
+        private void btnModificarArt_Click(object sender, EventArgs e)
+        {
+            Articulos articulo = (Articulos)cbxArticulos.SelectedItem;
+            ArticulosModificar ventana = new ArticulosModificar(articulo);
+            ventana.ShowDialog();
+
+            Articulos aux;
+            aux = (Articulos)cbxArticulos.SelectedItem;
+            txtPrecio.Text = aux.Pu.ToString();
+            txtStock.Text = aux.Stock.ToString();
+            txtCompra.Text = aux.PuCompra.ToString();
         }
     }   
 }
