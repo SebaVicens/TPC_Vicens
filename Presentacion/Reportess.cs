@@ -11,8 +11,8 @@ using System.Data.SqlClient;
 using Dominio;
 using Negocio;
 using Excel = Microsoft.Office.Interop.Excel;
-//using CrystalDecisions.CrystalReports.Engine;
-//using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace Presentacion
 {
@@ -79,6 +79,46 @@ namespace Presentacion
         private void btnReporte2_Click(object sender, EventArgs e)
         {
             DgvFacturacion.DataSource = BD.Ejecutar("SELECT VE.IDVENTA AS FACTURA,VE.FECHA, CL.APELLIDO + ' ' + CL.NOMBRE AS CLIENTE, AR.DESCRIPCION,AXV.PU,US.APELLIDO + ' ' + US.NOMBRE  AS VENDEDOR FROM VENTAS AS VE INNER JOIN CLIENTES AS CL ON VE.IDCLIENTE = CL.IDCLIENTE INNER JOIN USUARIOS AS US ON VE.IDUSUARIO = US.IDUSUARIO INNER JOIN ARTICULOS_X_VENTA AS AXV ON VE.IDVENTA = AXV.IDVENTA INNER JOIN ARTICULOS AS AR ON AXV.IDARTICULO = AR.IDARTICULO ORDER BY VE.IDVENTA DESC").Tables[0];
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if (txtFacID.Text == "") { MessageBox.Show("INGRESE NUMERO DE FACTURA"); }
+            else
+            {
+                int newidventa = 0;
+
+                VentasNegocio ventaacc = new VentasNegocio();
+                newidventa = ventaacc.obtenerId();
+
+                if (Convert.ToInt32(txtFacID.Text) > newidventa) { MessageBox.Show("NUMERO DE FACTURA INVALIDO"); }
+                else
+                {
+
+
+                    int fac = Convert.ToInt32(txtFacID.Text);
+                    Report1 form = new Report1(fac);
+                    ReportDocument oRep = new ReportDocument();
+                    ParameterField pf = new ParameterField();
+                    ParameterFields pfs = new ParameterFields();
+                    ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                    pf.Name = "@idventa";
+                    pdv.Value = fac;
+                    pf.CurrentValues.Add(pdv);
+                    pfs.Add(pf);
+                    form.Show();
+                }
+            }
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtFacID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
         }
     }
 }
