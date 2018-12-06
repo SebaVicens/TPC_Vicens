@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comprarr));
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCompra = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,22 +55,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvCompras)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(206, 54);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 944;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(453, 125);
+            this.label7.Location = new System.Drawing.Point(452, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 15);
             this.label7.TabIndex = 938;
@@ -79,7 +69,7 @@
             // 
             // txtCompra
             // 
-            this.txtCompra.Location = new System.Drawing.Point(329, 147);
+            this.txtCompra.Location = new System.Drawing.Point(328, 115);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.ReadOnly = true;
             this.txtCompra.Size = new System.Drawing.Size(121, 20);
@@ -91,7 +81,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(246, 125);
+            this.label5.Location = new System.Drawing.Point(245, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 15);
             this.label5.TabIndex = 937;
@@ -99,7 +89,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(249, 147);
+            this.txtStock.Location = new System.Drawing.Point(248, 115);
             this.txtStock.Name = "txtStock";
             this.txtStock.ReadOnly = true;
             this.txtStock.Size = new System.Drawing.Size(75, 20);
@@ -111,7 +101,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(328, 125);
+            this.label6.Location = new System.Drawing.Point(327, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 15);
             this.label6.TabIndex = 936;
@@ -119,7 +109,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(456, 147);
+            this.txtPrecio.Location = new System.Drawing.Point(455, 115);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.ReadOnly = true;
             this.txtPrecio.Size = new System.Drawing.Size(121, 20);
@@ -141,7 +131,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(23, 125);
+            this.label4.Location = new System.Drawing.Point(22, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 935;
@@ -149,9 +139,10 @@
             // 
             // cbxArticulos
             // 
-            this.cbxArticulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxArticulos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxArticulos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxArticulos.FormattingEnabled = true;
-            this.cbxArticulos.Location = new System.Drawing.Point(27, 146);
+            this.cbxArticulos.Location = new System.Drawing.Point(26, 114);
             this.cbxArticulos.Name = "cbxArticulos";
             this.cbxArticulos.Size = new System.Drawing.Size(205, 21);
             this.cbxArticulos.TabIndex = 921;
@@ -173,7 +164,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(580, 125);
+            this.label13.Location = new System.Drawing.Point(579, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 15);
             this.label13.TabIndex = 932;
@@ -181,7 +172,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(583, 147);
+            this.txtCantidad.Location = new System.Drawing.Point(582, 115);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(111, 20);
             this.txtCantidad.TabIndex = 922;
@@ -262,10 +253,10 @@
             // DgvCompras
             // 
             this.DgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvCompras.Location = new System.Drawing.Point(26, 220);
+            this.DgvCompras.Location = new System.Drawing.Point(26, 172);
             this.DgvCompras.Name = "DgvCompras";
             this.DgvCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCompras.Size = new System.Drawing.Size(668, 220);
+            this.DgvCompras.Size = new System.Drawing.Size(668, 268);
             this.DgvCompras.TabIndex = 928;
             // 
             // btnCargar
@@ -289,7 +280,7 @@
             // 
             // btnModificarArt
             // 
-            this.btnModificarArt.Location = new System.Drawing.Point(724, 127);
+            this.btnModificarArt.Location = new System.Drawing.Point(722, 95);
             this.btnModificarArt.Name = "btnModificarArt";
             this.btnModificarArt.Size = new System.Drawing.Size(100, 59);
             this.btnModificarArt.TabIndex = 946;
@@ -305,7 +296,6 @@
             this.ClientSize = new System.Drawing.Size(854, 492);
             this.Controls.Add(this.btnModificarArt);
             this.Controls.Add(this.lblusuariocomp);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCompra);
             this.Controls.Add(this.label5);
@@ -338,7 +328,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCompra;
         private System.Windows.Forms.Label label5;

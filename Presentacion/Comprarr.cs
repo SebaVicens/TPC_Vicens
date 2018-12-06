@@ -22,8 +22,12 @@ namespace Presentacion
         public static decimal TotalCompra; 
         private IList<CompraArticulos> listaDetallecompra = new List<CompraArticulos>(); //
 
+
+
+
         private void Comprarr_Load(object sender, EventArgs e)
         {
+
 
             btnModificarArt.Enabled = false;
             txtCantidad.Enabled = false;
@@ -62,8 +66,9 @@ namespace Presentacion
 
 
             txtCantidad.Text = "1";
-            ArticulosNegocio articuloslista = new ArticulosNegocio();
+            ArticulosNegocio articuloslista = new ArticulosNegocio(); 
             cbxArticulos.DataSource = articuloslista.listarxprov(auxprov);
+            cbxArticulos.SelectedItem = null;
 
             cbxproveedor.Enabled = false;
             btnModificarArt.Enabled = true;
@@ -77,11 +82,20 @@ namespace Presentacion
 
         private void cbxArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Articulos aux;
-            aux = (Articulos)cbxArticulos.SelectedItem;
-            txtPrecio.Text = aux.Pu.ToString();
-            txtStock.Text = aux.Stock.ToString();
-            txtCompra.Text = aux.PuCompra.ToString();
+            if (cbxArticulos.SelectedItem == null)
+            {
+                txtPrecio.Text = "";
+                txtStock.Text = "";
+                txtCompra.Text = "";
+            }
+            else
+            {
+                Articulos aux;
+                aux = (Articulos)cbxArticulos.SelectedItem;
+                txtPrecio.Text = aux.Pu.ToString();
+                txtStock.Text = aux.Stock.ToString();
+                txtCompra.Text = aux.PuCompra.ToString();
+            }
         } // EVENTO QUE CARGA LOS VALORES DE ARTICULO SELEC
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -278,5 +292,6 @@ namespace Presentacion
             txtStock.Text = aux.Stock.ToString();
             txtCompra.Text = aux.PuCompra.ToString();
         }
+
     }   
 }

@@ -13,6 +13,6 @@ namespace Dominio
         public UsuariosGerarquia gerarquia { get; set; }
         public int idlocalidad { get; set; }
         public string sexo { get; set; }
-        public bool Estado { get; set; } 
+        public bool Estado { get; set; }
     }
 }

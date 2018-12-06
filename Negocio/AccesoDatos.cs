@@ -105,5 +105,32 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public void ejecutarLectura()
+        {
+            try
+            {
+                this.comando.Connection = this.conexion;
+                this.lector = this.comando.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public void setearParametroConValor(string variable, object valor)
+        {
+            try
+            {
+                this.comando.Parameters.AddWithValue(variable, valor);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

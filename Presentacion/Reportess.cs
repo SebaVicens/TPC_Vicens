@@ -94,18 +94,8 @@ namespace Presentacion
                 if (Convert.ToInt32(txtFacID.Text) > newidventa) { MessageBox.Show("NUMERO DE FACTURA INVALIDO"); }
                 else
                 {
-
-
                     int fac = Convert.ToInt32(txtFacID.Text);
                     Report1 form = new Report1(fac);
-                    ReportDocument oRep = new ReportDocument();
-                    ParameterField pf = new ParameterField();
-                    ParameterFields pfs = new ParameterFields();
-                    ParameterDiscreteValue pdv = new ParameterDiscreteValue();
-                    pf.Name = "@idventa";
-                    pdv.Value = fac;
-                    pf.CurrentValues.Add(pdv);
-                    pfs.Add(pf);
                     form.Show();
                 }
             }
@@ -119,6 +109,73 @@ namespace Presentacion
         private void txtFacID_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.SoloNumeros(e);
+        }
+
+        public SqlConnection cn = new SqlConnection ("data source=LAPTOP-20LSGO9A\\SQLEXPRESS; initial catalog=TPC_VICENS_BD; integrated security=sspi");
+
+        void buscar()
+        {
+
+            SqlDataAdapter da = new SqlDataAdapter("buscar",cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@fechaini", SqlDbType.DateTime).Value = dtpFechaInicial.Text;
+            da.SelectCommand.Parameters.Add("@fechafinal", SqlDbType.DateTime).Value = dtpFechaFinal.Text;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            this.DgvFacturacion.DataSource = dt;
+
+        }
+
+
+        void buscarid()
+        {
+
+            SqlDataAdapter da = new SqlDataAdapter("buscarid", cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = txtId.Text;
+            
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            this.DgvFacturacion.DataSource = dt;
+
+        }
+
+        void buscarapellido()
+        {
+
+            SqlDataAdapter da = new SqlDataAdapter("buscarapellido", cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@apellido", SqlDbType.NVarChar).Value = txtApellido.Text;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            this.DgvFacturacion.DataSource = dt;
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void btnBucarID_Click(object sender, EventArgs e)
+        {
+            buscarid();
+        }
+
+        private void btnApellido_Click(object sender, EventArgs e)
+        {
+            buscarapellido();
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
         }
     }
 }
