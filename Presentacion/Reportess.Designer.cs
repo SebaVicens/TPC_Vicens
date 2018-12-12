@@ -64,7 +64,7 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.Location = new System.Drawing.Point(719, 446);
+            this.BtnSalir.Location = new System.Drawing.Point(722, 446);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(100, 43);
             this.BtnSalir.TabIndex = 41;
@@ -102,6 +102,7 @@
             this.DgvFacturacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvFacturacion.Size = new System.Drawing.Size(614, 306);
             this.DgvFacturacion.TabIndex = 40;
+            this.DgvFacturacion.SelectionChanged += new System.EventHandler(this.DgvFacturacion_SelectionChanged);
             // 
             // btnExcel
             // 
@@ -128,9 +129,10 @@
             // 
             // txtFacID
             // 
-            this.txtFacID.Location = new System.Drawing.Point(33, 364);
+            this.txtFacID.Enabled = false;
+            this.txtFacID.Location = new System.Drawing.Point(48, 364);
             this.txtFacID.Name = "txtFacID";
-            this.txtFacID.Size = new System.Drawing.Size(60, 20);
+            this.txtFacID.Size = new System.Drawing.Size(34, 20);
             this.txtFacID.TabIndex = 67;
             this.txtFacID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFacID_KeyPress);
             // 

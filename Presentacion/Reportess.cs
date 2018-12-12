@@ -177,5 +177,15 @@ namespace Presentacion
         {
             Validaciones.SoloLetras(e);
         }
+
+        private void DgvFacturacion_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewRow row = DgvFacturacion.CurrentRow;
+
+            if (row == null)
+                return;
+
+            txtFacID.Text = row.Cells["FACTURA"].Value.ToString();
+        }
     }
 }
