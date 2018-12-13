@@ -134,6 +134,7 @@
             this.txtFacID.Name = "txtFacID";
             this.txtFacID.Size = new System.Drawing.Size(34, 20);
             this.txtFacID.TabIndex = 67;
+            this.txtFacID.TextChanged += new System.EventHandler(this.txtFacID_TextChanged);
             this.txtFacID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFacID_KeyPress);
             // 
             // label1

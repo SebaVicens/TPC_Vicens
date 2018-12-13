@@ -201,6 +201,12 @@
     <Compile Include="Ventass.Designer.cs">
       <DependentUpon>Ventass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventasss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventasss.Designer.cs">
+      <DependentUpon>Ventasss.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ArticulosModificar.resx">
       <DependentUpon>ArticulosModificar.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventass.resx">
       <DependentUpon>Ventass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventasss.resx">
+      <DependentUpon>Ventasss.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -73,12 +73,28 @@ namespace Presentacion
 
         private void btnReporte1_Click(object sender, EventArgs e)
         {
-            DgvFacturacion.DataSource = BD.Ejecutar("SELECT VE.IDVENTA AS FACTURA,VE.FECHA, CL.APELLIDO+' '+ CL.NOMBRE AS CLIENTE,US.APELLIDO+' '+ US.NOMBRE  AS VENDEDOR, SUM(AXV.PU) AS TOTAL_FACTURA FROM VENTAS AS VE INNER JOIN CLIENTES AS CL ON VE.IDCLIENTE = CL.IDCLIENTE INNER JOIN USUARIOS AS US ON VE.IDUSUARIO = US.IDUSUARIO INNER JOIN ARTICULOS_X_VENTA AS AXV ON VE.IDVENTA = AXV.IDVENTA INNER JOIN ARTICULOS AS AR ON AXV.IDARTICULO = AR.IDARTICULO GROUP BY VE.IDVENTA, CL.APELLIDO, US.APELLIDO,VE.FECHA,CL.NOMBRE, US.NOMBRE ORDER BY VE.IDVENTA DESC").Tables[0];
+            txtId.Text = "";
+            txtApellido.Text = "";
+            dtpFechaFinal.Text = "";
+            dtpFechaInicial.Text = "";
+            VentasNegocio v = new VentasNegocio();
+            //DgvFacturacion.DataSource = v.listarVentas();
+            //DgvFacturacion.Columns["Descripcion"].Visible = false;
+            //DgvFacturacion.Columns["Cantidad"].Visible = false;
+            //DgvFacturacion.Columns["Ventadet"].Visible = false;
+            DgvFacturacion.DataSource = BD.Ejecutar("SELECT VE.IDVENTA AS FACTURA,VE.FECHA, CL.APELLIDO+' '+ CL.NOMBRE AS CLIENTE,US.APELLIDO+' '+ US.NOMBRE  AS VENDEDOR, SUM(AXV.PU*AXV.CANTIDAD) AS TOTAL_FACTURA FROM VENTAS AS VE INNER JOIN CLIENTES AS CL ON VE.IDCLIENTE = CL.IDCLIENTE INNER JOIN USUARIOS AS US ON VE.IDUSUARIO = US.IDUSUARIO INNER JOIN ARTICULOS_X_VENTA AS AXV ON VE.IDVENTA = AXV.IDVENTA INNER JOIN ARTICULOS AS AR ON AXV.IDARTICULO = AR.IDARTICULO GROUP BY VE.IDVENTA, CL.APELLIDO, US.APELLIDO,VE.FECHA,CL.NOMBRE, US.NOMBRE ORDER BY VE.IDVENTA DESC").Tables[0];
         }
 
         private void btnReporte2_Click(object sender, EventArgs e)
         {
-            DgvFacturacion.DataSource = BD.Ejecutar("SELECT VE.IDVENTA AS FACTURA,VE.FECHA, CL.APELLIDO + ' ' + CL.NOMBRE AS CLIENTE, AR.DESCRIPCION,AXV.PU,US.APELLIDO + ' ' + US.NOMBRE  AS VENDEDOR FROM VENTAS AS VE INNER JOIN CLIENTES AS CL ON VE.IDCLIENTE = CL.IDCLIENTE INNER JOIN USUARIOS AS US ON VE.IDUSUARIO = US.IDUSUARIO INNER JOIN ARTICULOS_X_VENTA AS AXV ON VE.IDVENTA = AXV.IDVENTA INNER JOIN ARTICULOS AS AR ON AXV.IDARTICULO = AR.IDARTICULO ORDER BY VE.IDVENTA DESC").Tables[0];
+            //VentasDetalle vent;
+            //vent = (VentasDetalle)DgvFacturacion.CurrentRow.DataBoundItem;
+            Ventasss ff = new Ventasss(Convert.ToInt32(txtFacID.Text));
+            ff.ShowDialog();
+
+            //VentasNegocio vent = new VentasNegocio();
+            //vent.listarVentas();
+            //DgvFacturacion.DataSource = BD.Ejecutar("SELECT VE.IDVENTA AS FACTURA,VE.FECHA, CL.APELLIDO + ' ' + CL.NOMBRE AS CLIENTE, AR.DESCRIPCION,AXV.PU,US.APELLIDO + ' ' + US.NOMBRE  AS VENDEDOR FROM VENTAS AS VE INNER JOIN CLIENTES AS CL ON VE.IDCLIENTE = CL.IDCLIENTE INNER JOIN USUARIOS AS US ON VE.IDUSUARIO = US.IDUSUARIO INNER JOIN ARTICULOS_X_VENTA AS AXV ON VE.IDVENTA = AXV.IDVENTA INNER JOIN ARTICULOS AS AR ON AXV.IDARTICULO = AR.IDARTICULO ORDER BY VE.IDVENTA DESC").Tables[0];
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -185,7 +201,12 @@ namespace Presentacion
             if (row == null)
                 return;
 
-            txtFacID.Text = row.Cells["FACTURA"].Value.ToString();
+            txtFacID.Text = row.Cells["Factura"].Value.ToString();
+        }
+
+        private void txtFacID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
